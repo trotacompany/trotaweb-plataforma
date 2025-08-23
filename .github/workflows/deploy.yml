@@ -25,7 +25,7 @@ jobs:
             echo "DEPLOY_FOLDER=trotaweb-plataforma" >> $GITHUB_ENV
             echo "DEPLOY_ZIP=trotaweb-plataforma.zip" >> $GITHUB_ENV
             echo "DEPLOY_SCRIPT=/var/www/deploy_trotaweb_plataforma.sh" >> $GITHUB_ENV
-          elif [ "${{ github.ref_name }}" == "release" ]; then
+          elif [ "${{ github.ref_name }}" == "qa" ]; then
             echo "DEPLOY_FOLDER=qa-trotaweb-plataforma" >> $GITHUB_ENV
             echo "DEPLOY_ZIP=qa-trotaweb-plataforma.zip" >> $GITHUB_ENV
             echo "DEPLOY_SCRIPT=/var/www/qa_deploy_trotaweb_plataformap.sh" >> $GITHUB_ENV
