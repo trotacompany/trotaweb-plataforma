@@ -1,0 +1,106 @@
+
+.text-center{
+    text-align: center;
+}
+.text-left{
+    text-align: left;
+}
+.text-right{
+    text-align: right;
+}
+
+.body-small {
+    font-size: var(--sys-typescale-body-small-size);
+    font-family: var(--sys-typescale-body-small-family);
+    font-weight: var(--sys-typescale-body-small-weight);
+    line-height: var(--sys-typescale-body-small-line-height);
+}
+.body-medium {
+    font-size: var(--sys-typescale-body-medium-size);
+    font-family: var(--sys-typescale-body-medium-family);
+    font-weight: var(--sys-typescale-body-medium-weight);
+    line-height: var(--sys-typescale-body-medium-line-height);
+}
+.body-large {
+    font-size: var(--sys-typescale-body-large-size);
+    font-family: var(--sys-typescale-body-large-family);
+    font-weight: var(--sys-typescale-body-large-weight);
+    line-height: var(--sys-typescale-body-large-line-height);
+}
+
+.label-small {
+    font-size: var(--sys-typescale-label-small-size);
+    font-family: var(--sys-typescale-label-small-family);
+    font-weight: var(--sys-typescale-label-small-weight);
+    line-height: var(--sys-typescale-label-small-line-height);
+}
+.label-medium {
+    font-size: var(--sys-typescale-label-medium-size);
+    font-family: var(--sys-typescale-label-medium-family);
+    font-weight: var(--sys-typescale-label-medium-weight);
+    line-height: var(--sys-typescale-label-medium-line-height);
+}
+.label-large {
+    font-size: var(--sys-typescale-label-large-size);
+    font-family: var(--sys-typescale-label-large-family);
+    font-weight: var(--sys-typescale-label-large-weight);
+    line-height: var(--sys-typescale-label-large-line-height);
+}
+
+.title-small {
+    font-size: var(--sys-typescale-title-small-size);
+    font-family: var(--sys-typescale-title-small-family);
+    font-weight: var(--sys-typescale-title-small-weight);
+    line-height: var(--sys-typescale-title-small-line-height);
+}
+.title-medium {
+    font-size: var(--sys-typescale-title-medium-size);
+    font-family: var(--sys-typescale-title-medium-family);
+    font-weight: var(--sys-typescale-title-medium-weight);
+    line-height: var(--sys-typescale-title-medium-line-height);
+}
+.title-large {
+    font-size: var(--sys-typescale-title-large-size);
+    font-family: var(--sys-typescale-title-large-family);
+    font-weight: var(--sys-typescale-title-large-weight);
+    line-height: var(--sys-typescale-title-large-line-height);
+}
+
+.headline-small {
+    font-size: var(--sys-typescale-headline-small-size);
+    font-family: var(--sys-typescale-headline-small-family);
+    font-weight: var(--sys-typescale-headline-small-weight);
+    line-height: var(--sys-typescale-headline-small-line-height);
+}
+.headline-medium {
+    font-size: var(--sys-typescale-headline-medium-size);
+    font-family: var(--sys-typescale-headline-medium-family);
+    font-weight: var(--sys-typescale-headline-medium-weight);
+    line-height: var(--sys-typescale-headline-medium-line-height);
+}
+.headline-large {
+    font-size: var(--sys-typescale-headline-large-size);
+    font-family: var(--sys-typescale-headline-large-family);
+    font-weight: var(--sys-typescale-headline-large-weight);
+    line-height: var(--sys-typescale-headline-large-line-height);
+}
+
+.display-small {
+    font-size: var(--sys-typescale-display-small-size);
+    font-family: var(--sys-typescale-display-small-family);
+    font-weight: var(--sys-typescale-display-small-weight);
+    line-height: var(--sys-typescale-display-small-line-height);
+}
+.display-medium {
+    font-size: var(--sys-typescale-display-medium-size);
+    font-family: var(--sys-typescale-display-medium-family);
+    font-weight: var(--sys-typescale-display-medium-weight);
+    line-height: var(--sys-typescale-display-medium-line-height);
+}
+.display-large {
+    font-size: var(--sys-typescale-display-large-size);
+    font-family: var(--sys-typescale-display-large-family);
+    font-weight: var(--sys-typescale-display-large-weight);
+    line-height: var(--sys-typescale-display-large-line-height);
+}
+

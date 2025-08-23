@@ -1,0 +1,68 @@
+:root {
+    --comp-icon-button-standard-icon-color: var(--sys-color-on-surface-variant);
+    --comp-icon-button-standard-icon-color-toggle-unselected: var(--sys-color-on-surface-variant);
+    --comp-icon-button-standard-icon-color-toggle-selected: var(--sys-color-primary);
+
+    --comp-icon-button-standard-disabled-icon-color: var(--sys-color-on-surface-rgb);
+    --comp-icon-button-standard-disabled-icon-opacity: 0.38;
+
+    --comp-icon-button-standard-hovered-state-layer-color: var(--sys-color-on-surface-variant);
+    --comp-icon-button-standard-hovered-state-layer-color-toggle-unselected: var(--sys-color-on-surface-variant);
+    --comp-icon-button-standard-hovered-state-layer-color-toggle-selected: var(--sys-color-primary);
+    --comp-icon-button-standard-hovered-state-layer-opacity: 0.08;
+    --comp-icon-button-standard-hovered-icon-color: var(--sys-color-on-surface-variant);
+    --comp-icon-button-standard-hovered-icon-color-toggle-unselected: var(--sys-color-on-surface-variant);
+    --comp-icon-button-standard-hovered-icon-color-toggle-selected: var(--sys-color-primary);
+
+    --comp-icon-button-standard-focused-state-layer-color: var(--sys-color-on-surface-variant);
+    --comp-icon-button-standard-focused-state-layer-color-toggle-unselected: var(--sys-color-on-surface-variant);
+    --comp-icon-button-standard-focused-state-layer-color-toggle-selected: var(--sys-color-primary);
+    --comp-icon-button-standard-focused-state-layer-opacity: 0.1;
+    --comp-icon-button-standard-focused-icon-color: var(--sys-color-on-surface-variant);
+    --comp-icon-button-standard-focused-icon-color-toggle-unselected: var(--sys-color-on-surface-variant);
+    --comp-icon-button-standard-focused-icon-color-toggle-selected: var(--sys-color-primary);
+
+    --comp-icon-button-standard-pressed-state-layer-color: var(--sys-color-on-surface-variant);
+    --comp-icon-button-standard-pressed-state-layer-color-toggle-unselected: var(--sys-color-on-surface-variant);
+    --comp-icon-button-standard-pressed-state-layer-color-toggle-selected: var(--sys-color-primary);
+    --comp-icon-button-standard-pressed-state-layer-opacity: 0.1;
+    --comp-icon-button-standard-pressed-icon-color: var(--sys-color-on-surface-variant);
+    --comp-icon-button-standard-pressed-icon-color-toggle-unselected: var(--sys-color-on-surface-variant);
+    --comp-icon-button-standard-pressed-icon-color-toggle-selected: var(--sys-color-primary);
+}
+
+.icon-btn.standard {
+    --comp-icon-button-icon-color: var(--comp-icon-button-standard-icon-color);
+    --comp-icon-button-container-color: transparent;
+
+    --comp-icon-button-standard-disabled-icon-color: var(--sys-color-on-surface-rgb);
+    --comp-icon-button-standard-disabled-icon-opacity: 0.38;
+
+    --comp-icon-button-hovered-state-layer-color: var(--comp-icon-button-standard-hovered-state-layer-color);
+    --comp-icon-button-hovered-state-layer-state-color-toggle-unselected: var(--comp-icon-button-standard-hovered-state-layer-color-toggle-unselected);
+    --comp-icon-button-hovered-state-layer-state-color-toggle-selected: var(--comp-icon-button-standard-hovered-state-layer-color-toggle-selected);
+    --comp-icon-button-hovered-state-layer-opacity: var(--comp-icon-button-standard-hovered-state-layer-opacity);
+    --comp-icon-button-hovered-state-layer-elevation: var(--sys-elevation-level0);
+    --comp-icon-button-hovered-icon-color: var(--comp-icon-button-standard-hovered-icon-color);
+    --comp-icon-button-hovered-icon-color-toggle-unselected: var(--comp-icon-button-standard-hovered-icon-color);
+    --comp-icon-button-hovered-icon-color-toggle-selected: var(--comp-icon-button-standard-hovered-icon-color);
+
+
+    --comp-icon-button-focused-state-layer-color: var(--comp-icon-button-standard-focused-state-layer-color);
+    --comp-icon-button-focused-state-layer-color-toggle-unselected: var(--comp-icon-button-standard-focused-state-layer-color-toggle-unselected);
+    --comp-icon-button-focused-state-layer-color-toggle-selected: var(--comp-icon-button-standard-focused-state-layer-color-toggle-selected);
+    --comp-icon-button-focused-state-layer-opacity: var(--comp-icon-button-standard-focused-state-layer-opacity);
+    --comp-icon-button-focused-icon-color: var(--comp-icon-button-standard-focused-icon-color);
+    --comp-icon-button-focused-icon-color-toggle-unselected: var(--comp-icon-button-standard-focused-icon-color-toggle-unselected);
+    --comp-icon-button-focused-icon-color-toggle-selected: var(--comp-icon-button-standard-focused-icon-color-toggle-selected);
+
+    --comp-icon-button-pressed-state-layer-color: var(--comp-icon-button-standard-pressed-state-layer-color);
+    --comp-icon-button-pressed-state-layer-color-toggle-unselected: var(--comp-icon-button-standard-pressed-state-layer-color-toggle-unselected);
+    --comp-icon-button-pressed-state-layer-color-toggle-selected: var(--comp-icon-button-standard-pressed-state-layer-color-toggle-selected);
+    --comp-icon-button-pressed-state-layer-opacity: var(--comp-icon-button-standard-pressed-state-layer-opacity);
+    --comp-icon-button-pressed-icon-color: var(--comp-icon-button-standard-pressed-icon-color);
+    --comp-icon-button-pressed-icon-color-toggle-unselected: var(--comp-icon-button-standard-pressed-icon-color-toggle-unselected);
+    --comp-icon-button-pressed-icon-color-toggle-selected: var(--comp-icon-button-standard-pressed-icon-color-toggle-selected);
+
+    /*Icon buttons NO debería usar texto*/
+}

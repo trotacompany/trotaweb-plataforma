@@ -1,0 +1,199 @@
+/* Imports */
+@import url("./button-filled.css");
+@import url("./button-text.css");
+
+/* Variables */
+:root {
+    /* Colores base */
+    --comp-button-container-color: var(--sys-color-primary);
+    --comp-button-container-color-toggle-unselected: var(--sys-color-surface-container);
+    --comp-button-container-color-toggle-selected: var(--sys-color-primary);
+    --comp-button-shadow-color: var(--sys-color-shadow);
+    --comp-button-elevation: var(--sys-elevation-level0);
+    --comp-button-label-color: var(--sys-color-on-primary);
+    --comp-button-label-color-toggle-unselected: var(--sys-color-on-surface-variant);
+    --comp-button-label-color-toggle-selected: var(--sys-color-on-primary);
+    --comp-button-icon-color: var(--sys-color-on-primary);
+    --comp-button-icon-color-toggle-unselected: var(--sys-color-on-surface-variant);
+    --comp-button-icon-color-toggle-selected: var(--sys-color-on-primary);
+    --comp-button-container-height: 2.5rem;
+
+    /* Tipografía */
+    --comp-button-label-font: var(--sys-typescale-label-large-font);
+    --comp-button-label-weight: var(--sys-typescale-label-large-weight);
+    --comp-button-label-size: var(--sys-typescale-label-large-size);
+    --comp-button-label-line-height: var(--sys-typescale-label-large-line-height);
+    --comp-button-label-tracking: var(--sys-typescale-label-large-tracking);
+    --comp-button-icon-size: 1.25rem;
+
+    /* Formas */
+    --comp-button-shape-round: var(--sys-shape-corner-full);
+    --comp-button-shape-square: var(--sys-shape-corner-medium);
+    --comp-button-pressed-morph: var(--sys-shape-corner-small);
+    --comp-button-selected-container-shape-round: var(--sys-shape-corner-medium);
+    --comp-button-selected-container-shape-square: var(--sys-shape-corner-full);
+
+    /* Espaciado */
+    --comp-button-leading-space: 1.5rem;
+    --comp-button-between-icon-label-space: 0.5rem;
+    --comp-button-trailing-space: 1.5rem;
+
+    /* Focus */
+    --comp-button-focus-ring-indicator-color: var(--sys-color-secondary);
+    --comp-button-focus-ring-indicator-thickness: var(--sys-state-focus-indicator-thickness);
+
+    /* Estados: Disabled */
+    --comp-button-disabled-container-color: var(--sys-color-on-surface-rgb);
+    --comp-button-disabled-container-opacity: 0.1;
+    --comp-button-disabled-container-elevation: var(--sys-elevation-level0);
+    --comp-button-disabled-label-color: var(--sys-color-on-surface);
+    --comp-button-disabled-label-opacity: 0.38;
+    --comp-button-disabled-icon-color: var(--sys-color-on-surface);
+    --comp-button-disabled-icon-opacity: 0.38;
+
+    /* Estados: Hover */
+    --comp-button-hovered-container-layer-state-color: var(--sys-color-on-primary);
+    --comp-button-hovered-container-layer-state-color-toggle-unselected: var(--sys-color-on-surface-variant);
+    --comp-button-hovered-container-layer-state-color-toggle-selected: var(--sys-color-on-primary);
+    --comp-button-hovered-container-layer-state-opacity: 0.08;
+    --comp-button-hovered-container-layer-state-elevation: var(--sys-elevation-level0);
+    --comp-button-hovered-label-color: var(--sys-color-on-primary);
+    --comp-button-hovered-label-color-toggle-unselected: var(--sys-color-on-surface-variant);
+    --comp-button-hovered-label-color-toggle-selected: var(--sys-color-on-primary);
+    --comp-button-hovered-icon-color: var(--sys-color-on-primary);
+    --comp-button-hovered-icon-color-toggle-unselected: var(--sys-color-on-surface-variant);
+    --comp-button-hovered-icon-color-toggle-selected: var(--sys-color-on-primary);
+
+    /* Estados: Focus */
+    --comp-button-focused-container-layer-state-color: var(--sys-color-on-primary);
+    --comp-button-focused-container-layer-state-color-toggle-unselected: var(--sys-color-on-surface-variant);
+    --comp-button-focused-container-layer-state-color-toggle-selected: var(--sys-color-on-primary);
+    --comp-button-focused-container-layer-state-opacity: 0.1;
+    --comp-button-focused-container-layer-state-elevation: var(--sys-elevation-level0);
+    --comp-button-focused-label-color: var(--sys-color-on-primary);
+    --comp-button-focused-label-color-toggle-unselected: var(--sys-color-on-surface-variant);
+    --comp-button-focused-label-color-toggle-selected: var(--sys-color-on-primary);
+    --comp-button-focused-icon-color: var(--sys-color-on-primary);
+    --comp-button-focused-icon-color-toggle-unselected: var(--sys-color-on-surface-variant);
+    --comp-button-focused-icon-color-toggle-selected: var(--sys-color-on-primary);
+
+    /* Estados: Pressed */
+    --comp-button-pressed-container-layer-state-color: var(--sys-color-on-primary);
+    --comp-button-pressed-container-layer-state-color-toggle-unselected: var(--sys-color-on-surface-variant);
+    --comp-button-pressed-container-layer-state-color-toggle-selected: var(--sys-color-on-primary);
+    --comp-button-pressed-container-layer-state-opacity: 0.1;
+    --comp-button-pressed-container-layer-state-elevation: var(--sys-elevation-level0);
+    --comp-button-pressed-label-color: var(--sys-color-on-primary);
+    --comp-button-pressed-label-color-toggle-unselected: var(--sys-color-on-surface-variant);
+    --comp-button-pressed-label-color-toggle-selected: var(--sys-color-on-primary);
+    --comp-button-pressed-icon-color: var(--sys-color-on-primary);
+    --comp-button-pressed-icon-color-toggle-unselected: var(--sys-color-on-surface-variant);
+    --comp-button-pressed-icon-color-toggle-selected: var(--sys-color-on-primary);
+}
+
+/* Estilos base del botón */
+.btn {
+    transition: all var(--sys-motion-duration-short2);
+    transition-timing-function: var(--sys-motion-easing-emphasized-accelerate);
+    padding-left: var(--comp-button-leading-space);
+    padding-right: var(--comp-button-trailing-space);
+    gap: var(--comp-button-between-icon-label-space);
+    background-color: var(--comp-button-container-color);
+    box-shadow: var(--comp-button-elevation);
+    color: var(--comp-button-label-color);
+    height: var(--comp-button-container-height);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    outline-offset: var(--sys-state-focus-indicator-outer-offset);
+    border: none;
+    position: relative;
+    font-family: var(--comp-button-label-font);
+    font-weight: var(--comp-button-label-weight);
+    font-size: var(--comp-button-label-size);
+    line-height: var(--comp-button-label-line-height);
+    border-radius: var(--comp-button-shape-round);
+    overflow: hidden;
+}
+
+/* Estados del botón */
+.btn:disabled {
+    background-color: rgba(var(--comp-button-disabled-container-color), var(--comp-button-disabled-container-opacity));
+    box-shadow: var(--comp-button-disabled-container-elevation);
+    color: rgba(var(--comp-button-disabled-label-color), var(--comp-button-disabled-label-opacity));
+    pointer-events: none;
+}
+
+/* State layer */
+.btn:not(:disabled)::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    padding: inherit;
+    border: var(--comp-button-focus-ring-indicator-thickness) solid var(--comp-button-hovered-container-layer-state-color);
+    background-color: var(--comp-button-hovered-container-layer-state-color);
+    border-radius: inherit;
+    border: none;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity var(--sys-motion-duration-short2);
+    transition-timing-function: var(--sys-motion-easing-emphasized);
+}
+
+/* Hover state */
+.btn:not(:disabled):hover::before {
+    opacity: var(--comp-button-hovered-container-layer-state-opacity);
+}
+.btn:not(:disabled):hover {
+    color: var(--comp-button-hovered-label-color);
+    box-shadow: var(--comp-button-hovered-container-layer-state-elevation);
+    cursor: pointer;
+}
+
+/* Focus state */
+.btn:not(:disabled):focus::before {
+    opacity: var(--comp-button-focused-container-layer-state-opacity);
+}
+.btn:focus {
+    outline: var(--comp-button-focus-ring-indicator-thickness) solid var(--comp-button-focus-ring-indicator-color);
+    border-radius: var(--comp-button-selected-container-shape-round);
+    color: var(--comp-button-focused-label-color);
+    box-shadow: var(--comp-button-focused-container-layer-state-elevation);
+}
+.btn:not(:disabled):focus-within {
+    outline: var(--comp-button-focus-ring-indicator-thickness) solid var(--comp-button-focus-ring-indicator-color);
+}
+
+/* Active state */
+.btn:not(:disabled):active::before {
+    opacity: var(--comp-button-pressed-container-layer-state-opacity);
+}
+.btn:active {
+    outline: var(--comp-button-focus-ring-indicator-thickness) solid var(--comp-button-focus-ring-indicator-color);
+    border-radius: var(--comp-button-pressed-morph);
+    color: var(--comp-button-pressed-label-color);
+    box-shadow: var(--comp-button-pressed-container-layer-state-elevation);
+}
+
+/* Toggle states */
+.btn.toggled-unselected {
+    background-color: var(--comp-button-container-color-toggle-unselected);
+    color: var(--comp-button-label-color-toggle-unselected);
+    height: var(--comp-button-container-height)
+}
+.btn.toggled-unselected:hover {
+    color: var(--comp-button-hovered-label-color-toggle-unselected);
+}
+
+.btn.toggled-selected {
+    background-color: var(--comp-button-container-color-toggle-selected);
+    color: var(--comp-button-label-color-toggle-selected);
+    height: var(--comp-button-container-height)
+}
+.btn.toggled-selected:hover {
+    color: var(--comp-button-hovered-label-color-toggle-selected);
+}

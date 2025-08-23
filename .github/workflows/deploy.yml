@@ -1,0 +1,71 @@
+name: Deploy Trotaweb-app
+
+on:
+  push:
+    branches:
+      - main
+      - qa
+
+  workflow_dispatch: # Permite ejecución manual
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout del código
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # 2. Detectar la rama y configurar variables
+      - name: Set deployment variables
+        id: vars
+        run: |
+          if [ "${{ github.ref_name }}" == "main" ]; then
+            echo "DEPLOY_FOLDER=trotaweb-plataforma" >> $GITHUB_ENV
+            echo "DEPLOY_ZIP=trotaweb-plataforma.zip" >> $GITHUB_ENV
+            echo "DEPLOY_SCRIPT=/var/www/deploy_trotaweb_plataforma.sh" >> $GITHUB_ENV
+          elif [ "${{ github.ref_name }}" == "release" ]; then
+            echo "DEPLOY_FOLDER=qa-trotaweb-plataforma" >> $GITHUB_ENV
+            echo "DEPLOY_ZIP=qa-trotaweb-plataforma.zip" >> $GITHUB_ENV
+            echo "DEPLOY_SCRIPT=/var/www/qa_deploy_trotaweb_plataformap.sh" >> $GITHUB_ENV
+          fi
+
+      # 3. Comprimir el archivo .zip
+      - name: Create deployment package
+        run: |
+          zip -r $DEPLOY_ZIP . -x "*.git*" "*.github*" "node_modules/*" ".vscode/*" ".vs/*" "README.md" "docker-compose.yml"
+
+      # 4. Subir el archivo .zip al servidor
+      - name: Upload .zip to server
+        env:
+          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+        run: |
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+
+          echo "$DEPLOY_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+
+          ssh-keyscan -H 82.29.59.137 >> ~/.ssh/known_hosts
+
+          scp -i ~/.ssh/id_rsa $DEPLOY_ZIP deploy_user@82.29.59.137:/var/www/$DEPLOY_ZIP
+
+          rm ~/.ssh/id_rsa
+
+      # 5. Descomprimir y desplegar la app
+      - name: Deploy on server
+        env:
+          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+        run: |
+          mkdir -p ~/.ssh
+          echo "$DEPLOY_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+
+          ssh -i ~/.ssh/id_rsa deploy_user@82.29.59.137 << EOF
+            cd /var/www/
+            unzip -o $DEPLOY_ZIP -d $DEPLOY_FOLDER
+            sudo $DEPLOY_SCRIPT
+          EOF
+
+          rm ~/.ssh/id_rsa

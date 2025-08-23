@@ -1,0 +1,65 @@
+:root {
+
+    --comp-carousel-container-leading-spacing: 1rem;
+    --comp-carousel-container-trailing-spacing: 1rem;
+    --comp-carousel-container-between-items-spacing: .5rem;
+    --comp-carousel-container-vertical-spacing: .5rem;
+
+    --comp-carousel-item-outline-color: var(--sys-color-outline);
+    --comp-carousel-item-outline-width: 0.063rem;
+
+    --comp-carousel-item-container-color: var(--sys-color-surface);
+    --comp-carousel-item-container-elevation: var(--sys-elevation-level0);
+    --comp-carousel-item-container-shadow-color: var(--sys-color-shadow);
+    --comp-carousel-item-container-shape: var(--sys-shape-corner-extra-large);
+
+
+    --comp-carousel-item-small-min-width: 2.5rem;
+    --comp-carousel-item-small-max-width: 3.5rem;
+
+    --comp-carousel-item-hover-container-elevation: var(--sys-elevation-level1);
+    --comp-carousel-item-hover-state-layer-color: var(--sys-color-on-surface);
+    --comp-carousel-item-hover-state-layer-opacity: 0.08;
+    --comp-carousel-item-hover-outline-color: var(--sys-color-outline);
+    . --comp-carousel-item-disabled-container-elevation: var(--sys-elevation-level0);
+    --comp-carousel-item-disabled-container-opacity: 0.38;
+    --comp-carousel-item-disabled-container-color: var(--sys-color-surface);
+    --comp-carousel-item-disabled-outline-color: var(--sys-color-outline);
+    --comp-carousel-item-disabled-outline-opacity: 0.12;
+
+    --comp-carousel-item-focus-indicator-color: var(--sys-color-secondary);
+    --comp-carousel-item-focus-indicator-thickness: var(--sys-state-focus-indicator-thickness);
+    --comp-carousel-item-focus-outline-color: var(--sys-color-on-surface);
+    --comp-carousel-item-focus-container-elevation: var(--sys-elevation-level0);
+    --comp-carousel-item-focus-state-layer-color: var(--sys-color-on-surface);
+    --comp-carousel-item-focus-state-layer-opacity: 0.1;
+}
+
+.comp-carousel {
+    width: 100%;
+    display: flex;
+    height: 250px;
+    flex-direction: row;
+    gap: var(--comp-carousel-container-between-items-spacing);
+    padding: var(--comp-carousel-container-vertical-spacing) var(--comp-carousel-container-leading-spacing) var(--comp-carousel-container-vertical-spacing) var(--comp-carousel-container-trailing-spacing);
+}
+
+
+.comp-carousel .item {
+    border: var(--comp-carousel-item-outline-width) solid var(--comp-carousel-item-outline-color);
+    background-color: var(--comp-carousel-item-container-color);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    height: 100%;
+
+    box-shadow: var(--comp-carousel-item-container-elevation);
+    border-radius: var(--comp-carousel-item-container-shape);
+    flex: 1;
+    align-items: end;
+    justify-content: center;
+}
+.comp-carousel .item.small {
+    min-width: var(--comp-carousel-item-small-min-width);
+    max-width: var(--comp-carousel-item-small-max-width);
+}

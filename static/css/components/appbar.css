@@ -1,0 +1,171 @@
+:root {
+    --comp-app-bar-container-color: var(--sys-color-surface);
+    --comp-app-bar-container-color-on-scroll: var(--sys-color-surface-container);
+    --comp-app-bar-container-elevation: var(--sys-elevation-level0);
+    --comp-app-bar-container-elevation-on-scroll: var(--sys-elevation-level2);
+    --comp-app-bar-title-text: var(--sys-color-on-surface);
+    --comp-app-bar-subtitle-text: var(--sys-color-on-surface-variant);
+    --comp-app-bar-leading-icon: var(--sys-color-on-surface);
+    --comp-app-bar-trailing-icon: var(--sys-color-on-surface-variant);
+
+    --comp-app-bar-left-padding: 0.25rem;
+    --comp-app-bar-right-padding: 0.25rem;
+    --comp-app-bar-icon-spacing: 0rem;
+
+    --comp-app-bar-container-shape: var(--sys-shape-corner-none);
+    --comp-app-bar-avatar-size: 2rem;
+    --comp-app-bar-icon-size: 1.5rem;
+
+
+    --comp-app-bar-small-container-height: 4rem;
+    --comp-app-bar-medium-container-height: 7rem;
+    --comp-app-bar-large-container-height: 7rem;
+
+    --comp-app-bar-small-title-font: var(--sys-typescale-title-large-font);
+    --comp-app-bar-small-title-weight: var(--sys-typescale-title-large-weight);
+    --comp-app-bar-small-title-size: var(--sys-typescale-title-large-size);
+    --comp-app-bar-small-title-line-height: var(--sys-typescale-title-large-line-height);
+    --comp-app-bar-small-title-tracking: var(--sys-typescale-title-large-tracking);
+    
+    --comp-app-bar-medium-title-font: var(--sys-typescale-display-small-font);
+    --comp-app-bar-medium-title-weight: var(--sys-typescale-display-small-weight);
+    --comp-app-bar-medium-title-size: var(--sys-typescale-display-small-size);
+    --comp-app-bar-medium-title-line-height: var(--sys-typescale-display-small-line-height);
+    --comp-app-bar-medium-title-tracking: var(--sys-typescale-display-small-tracking);
+
+    --comp-app-bar-small-subtitle-font: var(--sys-typescale-body-small-font);
+    --comp-app-bar-small-subtitle-weight: var(--sys-typescale-body-small-weight);
+    --comp-app-bar-small-subtitle-size: var(--sys-typescale-body-small-size);
+    --comp-app-bar-small-subtitle-line-height: var(--sys-typescale-body-small-line-height);
+    --comp-app-bar-small-subtitle-tracking: var(--sys-typescale-body-small-tracking);
+
+    --comp-app-bar-medium-subtitle-font: var(--sys-typescale-title-small-font);
+    --comp-app-bar-medium-subtitle-weight: var(--sys-typescale-title-small-weight);
+    --comp-app-bar-medium-subtitle-size: var(--sys-typescale-title-small-size);
+    --comp-app-bar-medium-subtitle-line-height: var(--sys-typescale-title-small-line-height);
+    --comp-app-bar-medium-subtitle-tracking: var(--sys-typescale-title-small-tracking);
+
+    --comp-app-bar-label-text-font: var(--sys-typescale-body-medium-font);
+    --comp-app-bar-label-text-weight: var(--sys-typescale-body-medium-weight);
+    --comp-app-bar-label-text-size: var(--sys-typescale-body-medium-size);
+    --comp-app-bar-label-text-line-height: var(--sys-typescale-body-medium-line-height);
+    --comp-app-bar-label-text-tracking: var(--sys-typescale-body-medium-tracking);
+}
+
+.comp-appbar {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+
+    height: var(--comp-app-bar-small-container-height);
+
+    font-size: var(--comp-app-bar-small-title-font);
+    font-weight: var(--comp-app-bar-small-title-weight);
+    font-size: var(--comp-app-bar-small-title-size);
+    line-height: var(--comp-app-bar-small-title-line-height);
+}
+
+.comp-appbar.medium {
+    align-items: baseline;
+    flex-direction: column;
+    height: var(--comp-app-bar-medium-container-height);
+
+    font-size: var(--comp-app-bar-medium-title-font);
+    font-weight: var(--comp-app-bar-medium-title-weight);
+    font-size: var(--comp-app-bar-medium-title-size);
+    line-height: var(--comp-app-bar-medium-title-line-height);
+}
+.comp-appbar.medium .top {
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.comp-appbar.medium .top div {
+    flex : 1 1;
+}
+
+.comp-appbar.medium .top .leading {
+    display: flex;
+    flex-direction: row;
+    flex: 0 0;
+    --comp-icon-button-icon-color: var(--comp-app-bar-leading-icon);
+    --comp-icon-button-standard-icon-color: var(--comp-app-bar-leading-icon);
+    --comp-icon-button-standard-hovered-icon-color: var(--comp-app-bar-leading-icon);
+    --comp-icon-button-standard-focused-icon-color: var(--comp-app-bar-leading-icon);
+    --comp-icon-button-standard-pressed-icon-color: var(--comp-app-bar-leading-icon);
+}
+.comp-appbar.medium .top .trailing {
+    flex: 0 0;
+    display: flex;
+    flex-direction: row;
+    --comp-icon-button-icon-color: var(--comp-app-bar-trailing-icon);
+    --comp-icon-button-standard-icon-color: var(--comp-app-bar-trailing-icon);
+    --comp-icon-button-standard-hovered-icon-color: var(--comp-app-bar-trailing-icon);
+    --comp-icon-button-standard-focused-icon-color: var(--comp-app-bar-trailing-icon);
+    --comp-icon-button-standard-pressed-icon-color: var(--comp-app-bar-trailing-icon);
+}
+
+.comp-appbar .title,
+.comp-appbar h1,
+.comp-appbar h2,
+.comp-appbar h3{
+    font-size: var(--comp-app-bar-small-title-font);
+    font-weight: var(--comp-app-bar-small-title-weight);
+    font-size: var(--comp-app-bar-small-title-size);
+    line-height: var(--comp-app-bar-small-title-line-height);
+}
+.comp-appbar.medium .title,
+.comp-appbar.medium h1,
+.comp-appbar.medium h2,
+.comp-appbar.medium h3{
+    font-size: var(--comp-app-bar-medium-title-font);
+    font-weight: var(--comp-app-bar-medium-title-weight);
+    font-size: var(--comp-app-bar-medium-title-size);
+    line-height: var(--comp-app-bar-medium-title-line-height);
+}
+.comp-appbar .subtitle,
+.comp-appbar h4,
+.comp-appbar h5,
+.comp-appbar h6 {
+    font-size: var(--comp-app-bar-small-subtitle-font);
+    font-weight: var(--comp-app-bar-small-subtitle-weight);
+    font-size: var(--comp-app-bar-small-subtitle-size);
+    line-height: var(--comp-app-bar-small-subtitle-line-height);
+}
+.comp-appbar.medium .subtitle,
+.comp-appbar.medium h4,
+.comp-appbar.medium h5,
+.comp-appbar.medium h6 {
+    font-size: var(--comp-app-bar-medium-subtitle-font);
+    font-weight: var(--comp-app-bar-medium-subtitle-weight);
+    font-size: var(--comp-app-bar-medium-subtitle-size);
+    line-height: var(--comp-app-bar-medium-subtitle-line-height);
+}
+
+.comp-appbar div {
+    flex: 1 1;
+}
+
+.comp-appbar .leading {
+    display: flex;
+    flex-direction: row;
+    flex: 0 0;
+    --comp-icon-button-icon-color: var(--comp-app-bar-leading-icon);
+    --comp-icon-button-standard-icon-color: var(--comp-app-bar-leading-icon);
+    --comp-icon-button-standard-hovered-icon-color: var(--comp-app-bar-leading-icon);
+    --comp-icon-button-standard-focused-icon-color: var(--comp-app-bar-leading-icon);
+    --comp-icon-button-standard-pressed-icon-color: var(--comp-app-bar-leading-icon);
+}
+
+.comp-appbar .trailing {
+    flex: 0 0;
+    display: flex;
+    flex-direction: row;
+    --comp-icon-button-icon-color: var(--comp-app-bar-trailing-icon);
+    --comp-icon-button-standard-icon-color: var(--comp-app-bar-trailing-icon);
+    --comp-icon-button-standard-hovered-icon-color: var(--comp-app-bar-trailing-icon);
+    --comp-icon-button-standard-focused-icon-color: var(--comp-app-bar-trailing-icon);
+    --comp-icon-button-standard-pressed-icon-color: var(--comp-app-bar-trailing-icon);
+}

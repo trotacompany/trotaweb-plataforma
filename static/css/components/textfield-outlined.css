@@ -1,0 +1,229 @@
+:root {
+    --comp-outlined-textfield-container-shape: var(--sys-shape-corner-extra-small);
+    --comp-outlined-textfield-outline-width: 0.063rem;
+    --comp-outlined-textfield-outline-color: var(--sys-color-outline);
+
+    --comp-outlined-textfield-label-text-color: var(--sys-color-on-surface-variant);
+    --comp-outlined-textfield-label-text-font: var(--sys-typescale-body-large-font);
+    --comp-outlined-textfield-label-text-weight: var(--sys-typescale-body-large-weight);
+    --comp-outlined-textfield-label-text-size: var(--sys-typescale-body-large-size);
+    --comp-outlined-textfield-label-text-line-height: var(--sys-typescale-body-large-line-height);
+    --comp-outlined-textfield-label-text-tracking: var(--sys-typescale-body-large-tracking);
+    
+    --comp-outlined-textfield-label-text-populated-size: var(--sys-typescale-body-small-size);
+    --comp-outlined-textfield-label-text-populated-line-height: var(--sys-typescale-body-small-line-height);
+
+    --comp-outlined-textfield-leading-icon-color: var(--sys-color-on-surface-variant);
+    --comp-outlined-textfield-leading-icon-size: 1.5rem;
+    --comp-outlined-textfield-trailing-icon-color: var(--sys-color-on-surface-variant);
+    --comp-outlined-textfield-trailing-icon-size: 1.5rem;
+    
+    --comp-outlined-textfield-supporting-text-color: var(--sys-color-on-surface-variant);
+    --comp-outlined-textfield-supporting-text-font: var(--sys-typescale-body-small-font);
+    --comp-outlined-textfield-supporting-text-weight: var(--sys-typescale-body-small-weight);
+    --comp-outlined-textfield-supporting-text-size: var(--sys-typescale-body-small-size);
+    --comp-outlined-textfield-supporting-text-line-height: var(--sys-typescale-body-small-line-height);
+    --comp-outlined-textfield-supporting-text-tracking: var(--sys-typescale-body-small-tracking);
+
+    --comp-outlined-textfield-input-text-color: var(--sys-color-on-surface);
+    --comp-outlined-textfield-input-text-font: var(--sys-typescale-body-large-font);
+    --comp-outlined-textfield-input-text-weight: var(--sys-typescale-body-large-weight);
+    --comp-outlined-textfield-input-text-size: var(--sys-typescale-body-large-size);
+    --comp-outlined-textfield-input-text-line-height: var(--sys-typescale-body-large-line-height);
+    --comp-outlined-textfield-input-text-tracking: var(--sys-typescale-body-large-tracking);
+    
+    --comp-outlined-textfield-input-text-suffix-color: var(--sys-color-on-surface-variant);
+    --comp-outlined-textfield-input-text-prefix-color: var(--sys-color-on-surface-variant);
+    --comp-outlined-textfield-input-text-placeholder-color: var(--sys-color-on-surface-variant);
+
+    --comp-outlined-textfield-caret-color: var(--sys-color-primary);
+    --comp-outlined-textfield-error-focus-caret-color: var(--sys-color-error);
+
+
+
+    /* Disabled */
+    --comp-outlined-textfield-disabled-label-text-color: var(--sys-color-on-surface);
+    --comp-outlined-textfield-disabled-label-text-opacity: 0.38;
+    --comp-outlined-textfield-disabled-leading-icon-color: var(--sys-color-on-surface);
+    --comp-outlined-textfield-disabled-leading-icon-opacity: 0.38;
+    --comp-outlined-textfield-disabled-trailing-icon-color: var(--sys-color-on-surface);
+    --comp-outlined-textfield-disabled-trailing-icon-opacity: 0.38;
+    --comp-outlined-textfield-disabled-outline-width: 0.063rem;
+    --comp-outlined-textfield-disabled-outline-color: var(--sys-color-on-surface);
+    --comp-outlined-textfield-disabled-outline-opacity: 0.12;
+    --comp-outlined-textfield-disabled-supporting-text-color: var(--sys-color-on-surface);
+    --comp-outlined-textfield-disabled-supporting-text-opacity: 0.38;
+    --comp-outlined-textfield-disabled-input-text-color: var(--sys-color-on-surface);
+    --comp-outlined-textfield-disabled-input-text-opacity: 0.38;
+
+    /* Hovered */
+    --comp-outlined-textfield-hover-label-text-color: var(--sys-color-on-surface);
+    --comp-outlined-textfield-hover-leading-icon-color: var(--sys-color-on-surface-variant);
+    --comp-outlined-textfield-hover-trailing-icon-color: var(--sys-color-on-surface-variant);
+    --comp-outlined-textfield-hover-outline-width: 0.063rem;
+    --comp-outlined-textfield-hover-outline-color: var(--sys-color-on-surface);
+    --comp-outlined-textfield-hover-input-text-color: var(--sys-color-on-surface);
+    --comp-outlined-textfield-hover-supporting-text-color: var(--sys-color-on-surface-variant);
+
+    /* Focused */
+    --comp-outlined-textfield-focus-label-text-color: var(--sys-color-primary);
+    --comp-outlined-textfield-focus-leading-icon-color: var(--sys-color-on-surface-variant);
+    --comp-outlined-textfield-focus-trailing-icon-color: var(--sys-color-on-surface-variant);
+    --comp-outlined-textfield-focus-outline-width: 0.188rem;
+    --comp-outlined-textfield-focus-outline-color: var(--sys-color-primary);
+    --comp-outlined-textfield-focus-input-text-color: var(--sys-color-on-surface);
+    --comp-outlined-textfield-focus-supporting-text-color: var(--sys-color-on-surface-variant);
+
+    /* Error */
+    --comp-outlined-textfield-error-outline-color: var(--sys-color-error);
+    --comp-outlined-textfield-error-label-text-color: var(--sys-color-error);
+    --comp-outlined-textfield-error-input-text-color: var(--sys-color-on-surface);
+    --comp-outlined-textfield-error-supporting-text-color: var(--sys-color-error);
+    --comp-outlined-textfield-error-leading-icon-color: var(--sys-color-on-surface-variant);
+    --comp-outlined-textfield-error-trailing-icon-color: var(--sys-color-error);
+
+    --comp-outlined-textfield-error-focus-outline-color: var(--sys-color-error);
+    --comp-outlined-textfield-error-focus-label-text-color: var(--sys-color-error);
+    --comp-outlined-textfield-error-focus-input-text-color: var(--sys-color-on-surface);
+    --comp-outlined-textfield-error-focus-supporting-text-color: var(--sys-color-error);
+    --comp-outlined-textfield-error-focus-leading-icon-color: var(--sys-color-on-surface-variant);
+    --comp-outlined-textfield-error-focus-trailing-icon-color: var(--sys-color-error);
+
+    --comp-outlined-textfield-error-hover-outline-color: var(--sys-color-on-error-container);
+    --comp-outlined-textfield-error-hover-label-text-color: var(--sys-color-on-error-container);
+    --comp-outlined-textfield-error-hover-input-text-color: var(--sys-color-on-surface);
+    --comp-outlined-textfield-error-hover-supporting-text-color: var(--sys-color-error);
+    --comp-outlined-textfield-error-hover-leading-icon-color: var(--sys-color-on-surface-variant);
+    --comp-outlined-textfield-error-hover-trailing-icon-color: var(--sys-color-on-error-container);
+
+
+}
+
+.textfield-outlined {
+    position: relative;
+    align-items: center;
+    display: flex;
+}
+
+.textfield-outlined label {
+    position: absolute;
+    user-select: none;
+    pointer-events: none;
+    padding: 0px;
+    margin: 0px;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    left: 1rem;
+    transition: all var(--sys-motion-duration-short2);
+    transition-timing-function: var(--sys-motion-easing-emphasized-accelerate);
+    font-family: var(--comp-outlined-textfield-label-text-font);
+    font-weight: var(--comp-outlined-textfield-label-text-weight);
+    font-size: var(--comp-outlined-textfield-label-text-size);
+    line-height: var(--comp-outlined-textfield-label-text-line-height);
+
+}
+.textfield-outlined .leading {
+    position: absolute;
+    user-select: none;
+    pointer-events: none;
+    padding: 0px;
+    margin: 0px;
+    padding-left: 0.75rem;
+    padding-right: 0rem;
+    transition: all var(--sys-motion-duration-short2);
+    transition-timing-function: var(--sys-motion-easing-emphasized-accelerate);
+
+    font-family: var(--comp-outlined-textfield-input-text-font);
+    font-weight: var(--comp-outlined-textfield-input-text-weight);
+    font-size: var(--comp-outlined-textfield-input-text-size);
+    line-height: var(--comp-outlined-textfield-input-text-line-height);
+}
+.textfield-outlined .leading .material-icon{
+    color:  var(--comp-outlined-textfield-leading-icon-color);
+    width:  var(--comp-outlined-textfield-leading-icon-size);
+    height:  var(--comp-outlined-textfield-leading-icon-size);
+}
+.textfield-outlined input, .textfield-outlined select {
+    height : 48px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: transparent;
+
+    border: var(--comp-outlined-textfield-outline-width) solid var(--comp-outlined-textfield-outline-color);
+
+    transition: color var(--sys-motion-duration-short2);
+    transition-timing-function: var(--sys-motion-easing-emphasized-accelerate);
+    
+    outline: none;
+    outline-offset: 0px;
+
+    
+    font-family: var(--comp-outlined-textfield-input-text-font);
+    font-weight: var(--comp-outlined-textfield-input-text-weight);
+    font-size: var(--comp-outlined-textfield-input-text-size);
+    line-height: var(--comp-outlined-textfield-input-text-line-height);
+
+    border-radius: var(--comp-outlined-textfield-container-shape);
+}
+
+.textfield-outlined input[type="file"] {
+    align-content: center;
+}
+
+.textfield-outlined:has(.leading) input, .textfield-outlined:has(.leading) select{
+    box-sizing: border-box;
+    padding-left: 2.75rem;
+}
+.textfield-outlined:has(.leading) label {
+    left: 2.5rem;
+}
+
+.textfield-outlined + .supporting-text {
+    
+    font-family: var(--comp-outlined-textfield-supporting-text-font);
+    font-weight: var(--comp-outlined-textfield-supporting-text-weight);
+    font-size: var(--comp-outlined-textfield-supporting-text-size);
+    line-height: var(--comp-outlined-textfield-supporting-text-line-height);
+}
+.textfield-outlined input:hover,
+.textfield-outlined select:hover  {
+    color: var(--comp-outlined-textfield-hover-input-color);
+    border-color: var(--comp-outlined-textfield-hover-outline-color);
+}
+.textfield-outlined input:focus,
+.textfield-outlined select:focus {
+    color: var(--comp-outlined-textfield-focus-input-color);
+    outline: var(--comp-outlined-textfield-focus-outline-width) solid var(--comp-outlined-textfield-focus-outline-color);
+    border-color: transparent;
+}
+.textfield-outlined input::placeholder,
+.textfield-outlined select::placeholder {
+    color:transparent;
+    display: none;
+    user-select: none;
+    pointer-events: none;
+}
+
+.textfield-outlined input:hover + label,
+.textfield-outlined select:hover + label {
+    color: var(--comp-outlined-textfield-hover-label-text-color);
+}
+
+/* Input con contenido o seleccionado */
+.textfield-outlined input:not(:placeholder-shown) + label,
+.textfield-outlined input:focus + label,
+.textfield-outlined select:has(option:checked) + label,
+.textfield-outlined select:focus + label {
+    transform: translateY(calc( -100% - .5rem ));
+    left: 1rem;
+    background-color: var(--sys-color-background);
+    color: var(--comp-outlined-textfield-focus-label-text-color);
+
+    font-size: var(--comp-outlined-textfield-label-text-populated-size);
+    line-height: var(--comp-outlined-textfield-label-text-populated-line-height);
+}
+
+
+

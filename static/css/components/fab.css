@@ -1,0 +1,127 @@
+:root {
+    --comp-fab-container-height : 3.5rem;
+    --comp-fab-container-width : 3.5rem;
+    --comp-fab-icon-size : 1.5rem;
+    --comp-fab-container-shape : var(--sys-shape-corner-large);
+    
+    --comp-fab-medium-container-height : 5rem;
+    --comp-fab-medium-container-width : 5rem;
+    --comp-fab-medium-icon-size : 1.75rem;
+    --comp-fab-medium-container-shape : var(--sys-shape-corner-large-increased);
+    
+    --comp-fab-large-container-height : 6rem;
+    --comp-fab-large-container-width : 6rem;
+    --comp-fab-large-icon-size : 2.25rem;
+    --comp-fab-large-container-shape : var(--sys-shape-corner-extra-large);
+
+    
+    --comp-fab-primary-container-color : var(--sys-color-primary);
+    --comp-fab-primary-container-shadow : var(--sys-color-shadow);
+    --comp-fab-primary-icon-color : var(--sys-color-on-primary);
+    --comp-fab-primary-container-elevation : var(--sys-elevation-level3);
+    --comp-fab-primary-hovered-container-elevation : var(--sys-elevation-level4);
+    --comp-fab-primary-hovered-icon-color : var(--sys-color-on-primary);
+    --comp-fab-primary-hovered-state-layer-color : var(--sys-color-on-primary);
+    --comp-fab-primary-hovered-state-layer-opacity : 0.08;
+    --comp-fab-primary-focused-container-elevation : var(--sys-elevation-level3);
+    --comp-fab-primary-focused-icon-color : var(--sys-color-on-primary);
+    --comp-fab-primary-focused-state-layer-color : var(--sys-color-on-primary);
+    --comp-fab-primary-focused-state-layer-opacity : 0.1;
+    --comp-fab-primary-pressed-container-elevation : var(--sys-elevation-level3);
+    --comp-fab-primary-pressed-icon-color : var(--sys-color-on-primary);
+    --comp-fab-primary-pressed-state-layer-color : var(--sys-color-on-primary);
+    --comp-fab-primary-pressed-state-layer-opacity : 0.1;
+
+
+    
+    --comp-fab-secondary-container-color : var(--sys-color-secondary);
+    --comp-fab-secondary-container-shadow : var(--sys-color-shadow);
+    --comp-fab-secondary-icon-color : var(--sys-color-on-secondary);
+    --comp-fab-secondary-container-elevation : var(--sys-elevation-level3);
+    --comp-fab-secondary-hovered-container-elevation : var(--sys-elevation-level4);
+    --comp-fab-secondary-hovered-icon-color : var(--sys-color-on-secondary);
+    --comp-fab-secondary-hovered-state-layer-color : var(--sys-color-on-secondary);
+    --comp-fab-secondary-hovered-state-layer-opacity : 0.08;
+    --comp-fab-secondary-focused-container-elevation : var(--sys-elevation-level3);
+    --comp-fab-secondary-focused-icon-color : var(--sys-color-on-secondary);
+    --comp-fab-secondary-focused-state-layer-color : var(--sys-color-on-secondary);
+    --comp-fab-secondary-focused-state-layer-opacity : 0.1;
+    --comp-fab-secondary-pressed-container-elevation : var(--sys-elevation-level3);
+    --comp-fab-secondary-pressed-icon-color : var(--sys-color-on-secondary);
+    --comp-fab-secondary-pressed-state-layer-color : var(--sys-color-on-secondary);
+    --comp-fab-secondary-pressed-state-layer-opacity : 0.1;
+
+    
+    --comp-fab-tertiary-container-color : var(--sys-color-tertiary);
+    --comp-fab-tertiary-container-shadow : var(--sys-color-shadow);
+    --comp-fab-tertiary-icon-color : var(--sys-color-on-tertiary);
+    --comp-fab-tertiary-container-elevation : var(--sys-elevation-level3);
+    --comp-fab-tertiary-hovered-container-elevation : var(--sys-elevation-level4);
+    --comp-fab-tertiary-hovered-icon-color : var(--sys-color-on-tertiary);
+    --comp-fab-tertiary-hovered-state-layer-color : var(--sys-color-on-tertiary);
+    --comp-fab-tertiary-hovered-state-layer-opacity : 0.08;
+    --comp-fab-tertiary-focused-container-elevation : var(--sys-elevation-level3);
+    --comp-fab-tertiary-focused-icon-color : var(--sys-color-on-tertiary);
+    --comp-fab-tertiary-focused-state-layer-color : var(--sys-color-on-tertiary);
+    --comp-fab-tertiary-focused-state-layer-opacity : 0.1;
+    --comp-fab-tertiary-pressed-container-elevation : var(--sys-elevation-level3);
+    --comp-fab-tertiary-pressed-icon-color : var(--sys-color-on-tertiary);
+    --comp-fab-tertiary-pressed-state-layer-color : var(--sys-color-on-tertiary);
+    --comp-fab-tertiary-pressed-state-layer-opacity : 0.1;
+
+
+    
+    --comp-fab-tonal-primary-container-color : var(--sys-color-primary-container);
+    --comp-fab-tonal-primary-container-shadow : var(--sys-color-shadow);
+    --comp-fab-tonal-primary-icon-color : var(--sys-color-on-primary-container);
+    --comp-fab-tonal-primary-container-elevation : var(--sys-elevation-level3);
+    --comp-fab-tonal-primary-hovered-container-elevation : var(--sys-elevation-level4);
+    --comp-fab-tonal-primary-hovered-icon-color : var(--sys-color-on-primary-container);
+    --comp-fab-tonal-primary-hovered-state-layer-color : var(--sys-color-on-primary-container);
+    --comp-fab-tonal-primary-hovered-state-layer-opacity : 0.08;
+    --comp-fab-tonal-primary-focused-container-elevation : var(--sys-elevation-level3);
+    --comp-fab-tonal-primary-focused-icon-color : var(--sys-color-on-primary-container);
+    --comp-fab-tonal-primary-focused-state-layer-color : var(--sys-color-on-primary-container);
+    --comp-fab-tonal-primary-focused-state-layer-opacity : 0.1;
+    --comp-fab-tonal-primary-pressed-container-elevation : var(--sys-elevation-level3);
+    --comp-fab-tonal-primary-pressed-icon-color : var(--sys-color-on-primary-container);
+    --comp-fab-tonal-primary-pressed-state-layer-color : var(--sys-color-on-primary-container);
+    --comp-fab-tonal-primary-pressed-state-layer-opacity : 0.1;
+
+
+    
+    --comp-fab-tonal-secondary-container-color : var(--sys-color-secondary-container);
+    --comp-fab-tonal-secondary-container-shadow : var(--sys-color-shadow);
+    --comp-fab-tonal-secondary-icon-color : var(--sys-color-on-secondary-container);
+    --comp-fab-tonal-secondary-container-elevation : var(--sys-elevation-level3);
+    --comp-fab-tonal-secondary-hovered-container-elevation : var(--sys-elevation-level4);
+    --comp-fab-tonal-secondary-hovered-icon-color : var(--sys-color-on-secondary-container);
+    --comp-fab-tonal-secondary-hovered-state-layer-color : var(--sys-color-on-secondary-container);
+    --comp-fab-tonal-secondary-hovered-state-layer-opacity : 0.08;
+    --comp-fab-tonal-secondary-focused-container-elevation : var(--sys-elevation-level3);
+    --comp-fab-tonal-secondary-focused-icon-color : var(--sys-color-on-secondary-container);
+    --comp-fab-tonal-secondary-focused-state-layer-color : var(--sys-color-on-secondary-container);
+    --comp-fab-tonal-secondary-focused-state-layer-opacity : 0.1;
+    --comp-fab-tonal-secondary-pressed-container-elevation : var(--sys-elevation-level3);
+    --comp-fab-tonal-secondary-pressed-icon-color : var(--sys-color-on-secondary-container);
+    --comp-fab-tonal-secondary-pressed-state-layer-color : var(--sys-color-on-secondary-container);
+    --comp-fab-tonal-secondary-pressed-state-layer-opacity : 0.1;
+
+    
+    --comp-fab-tonal-tertiary-container-color : var(--sys-color-tertiary-container);
+    --comp-fab-tonal-tertiary-container-shadow : var(--sys-color-shadow);
+    --comp-fab-tonal-tertiary-icon-color : var(--sys-color-on-tertiary-container);
+    --comp-fab-tonal-tertiary-container-elevation : var(--sys-elevation-level3);
+    --comp-fab-tonal-tertiary-hovered-container-elevation : var(--sys-elevation-level4);
+    --comp-fab-tonal-tertiary-hovered-icon-color : var(--sys-color-on-tertiary-container);
+    --comp-fab-tonal-tertiary-hovered-state-layer-color : var(--sys-color-on-tertiary-container);
+    --comp-fab-tonal-tertiary-hovered-state-layer-opacity : 0.08;
+    --comp-fab-tonal-tertiary-focused-container-elevation : var(--sys-elevation-level3);
+    --comp-fab-tonal-tertiary-focused-icon-color : var(--sys-color-on-tertiary-container);
+    --comp-fab-tonal-tertiary-focused-state-layer-color : var(--sys-color-on-tertiary-container);
+    --comp-fab-tonal-tertiary-focused-state-layer-opacity : 0.1;
+    --comp-fab-tonal-tertiary-pressed-container-elevation : var(--sys-elevation-level3);
+    --comp-fab-tonal-tertiary-pressed-icon-color : var(--sys-color-on-tertiary-container);
+    --comp-fab-tonal-tertiary-pressed-state-layer-color : var(--sys-color-on-tertiary-container);
+    --comp-fab-tonal-tertiary-pressed-state-layer-opacity : 0.1;
+}

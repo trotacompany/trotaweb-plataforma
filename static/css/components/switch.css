@@ -1,0 +1,203 @@
+:root {
+    --comp-switch-selected-icon-color: var(--sys-color-on-primary-container);
+    --comp-switch-selected-icon-size: 1rem;
+    --comp-switch-unselected-icon-color: var(--sys-color-surface-container-highest);
+    --comp-switch-unselected-icon-size: 1rem;
+    --comp-switch-track-height: 2rem;
+    --comp-switch-track-width: 3.25rem;
+    --comp-switch-outline-color: var(--sys-color-outline);
+    --comp-switch-outline-width: 0.125rem;
+    --comp-switch-track-shape: var(--sys-shape-corner-full);
+    --comp-switch-selected-track-color: var(--sys-color-primary);
+    --comp-switch-unselected-track-color: var(--sys-color-surface-container-highest);
+    --comp-switch-unselected-handle-height: 1rem;
+    --comp-switch-with-icon-handle: 1.5rem;
+    --comp-switch-selected-handle-height: 1.5rem;
+    --comp-switch-pressed-handle-height: 1.75rem;
+    --comp-switch-unselected-handle-with: 1rem;
+    --comp-switch-with-icon-handle: 1.5rem;
+    --comp-switch-selected-handle-width: 1.5rem;
+    --comp-switch-pressed-handle-width: 1.75rem;
+    --comp-switch-handle-shape: var(--sys-shape-corner-full);
+    --comp-switch-selected-handle-color: var(--sys-color-on-primary);
+    --comp-switch-unselected-handle-color: var(--sys-color-outline);
+    --comp-switch-state-layer-size: 2.5rem;
+    --comp-switch-state-layer-shape: var(--sys-shape-corner-full);
+
+
+    --comp-switch-disabled-selected-icon-color: var(--sys-color-on-surface-rgb);
+    --comp-switch-disabled-selected-icon-opacity: 0.38;
+    --comp-switch-disabled-unselected-icon-color: var(--sys-color-surface-container-highest-rgb);
+    --comp-switch-disabled-unselected-icon-opacity: 0.38;
+
+    --comp-switch-disabled-track-opacity: 0.12;
+    --comp-switch-disabled-selected-track-color: var(--sys-color-on-surface-rgb);
+    --comp-switch-disabled-unselected-track-color: var(--sys-color-surface-container-highest-rgb);
+    --comp-switch-disabled-unselected-track-outline-color: var(--sys-color-on-surface-rgb);
+
+    --comp-switch-disabled-unselected-handle-opacity: 0.38;
+    --comp-switch-disabled-selected-handle-opacity: 1;
+    --comp-switch-disabled-unselected-handle-color: var(--sys-color-on-surface-rgb);
+    --comp-switch-disabled-selected-handle-color: var(--sys-color-surface-rgb);
+
+    --comp-switch-selected-hover-icon-color: var(--sys-color-on-primary-container);
+    --comp-switch-unselected-hover-icon-color: var(--sys-color-surface-container-highest);
+    --comp-switch-selected-hover-handle-color: var(--sys-color-primary-container);
+    --comp-switch-unselected-hover-handle-color: var(--sys-color-on-surface-variant);
+    --comp-switch-selected-hover-track-color: var(--sys-color-primary);
+    --comp-switch-selected-hover-state-layer-color: var(--sys-color-primary);
+
+    --comp-switch-selected-hover-state-layer-opacity: 0.08;
+    --comp-switch-unselected-hover-track-color: var(--sys-color-surface-container-highest);
+    --comp-switch-unselected-hover-track-outline-color: var(--sys-color-outline);
+    --comp-switch-unselected-hover-state-layer-color: var(--sys-color-on-surface);
+    --comp-switch-unselected-hover-state-layer-opacity: 0.08;
+
+    --comp-switch-selected-hover-handle-color: var(--sys-color-primary-container);
+    --comp-switch-unselected-hover-handle-color: var(--sys-color-on-surface-variant);
+
+    --comp-switch-focus-indicator-color: var(--sys-color-secondary);
+    --comp-switch-focus-indicator-thickness: var(--sys-state-focus-indicator-thickness);
+    --comp-switch-selected-focus-icon-color: var(--sys-color-on-primary-container);
+    --comp-switch-unselected-focus-icon-color: var(--sys-color-surface-container-highest);
+    --comp-switch-selected-focus-handle-color: var(--sys-color-primary-container);
+    --comp-switch-unselected-focus-handle-color: var(--sys-color-on-surface-variant);
+    --comp-switch-selected-focus-track-color: var(--sys-color-primary);
+    --comp-switch-selected-focus-state-layer-color: var(--sys-color-primary);
+    --comp-switch-selected-focus-state-layer-opacity: 0.1;
+    --comp-switch-unselected-focus-track-color: var(--sys-color-surface-container-highest);
+    --comp-switch-unselected-focus-track-outline-color: var(--sys-color-outline);
+    --comp-switch-unselected-focus-state-layer-color: var(--sys-color-on-surface);
+    --comp-switch-unselected-focus-state-layer-opacity: 0.1;
+
+    
+    --comp-switch-focus-ring-indicator-color: var(--sys-color-secondary);
+    --comp-switch-focus-ring-indicator-thickness: var(--sys-state-focus-indicator-thickness);
+}
+
+.comp-switch {
+    width: var(--comp-switch-track-width);
+    height: var(--comp-switch-track-height);
+    border: var(--comp-switch-outline-width) solid var(--comp-switch-outline-color);
+    border-radius: var(--comp-switch-track-shape);
+    background-color: var(--comp-switch-unselected-track-color);
+    display: flex;
+    position: relative;
+    outline:none;
+    align-items: center;
+    transition: all var(--sys-motion-duration-short2);
+    transition-timing-function: var(--sys-motion-easing-emphasized);
+    outline-offset: var(--sys-state-focus-indicator-outer-offset);
+}
+
+.comp-switch:focus {
+    outline: var(--comp-switch-focus-ring-indicator-thickness) solid var(--comp-switch-focus-ring-indicator-color);
+}
+.comp-switch:active {
+    outline:none;
+}
+
+.comp-switch.selected {
+    width: var(--comp-switch-track-width);
+    height: var(--comp-switch-track-height);
+    border: var(--comp-switch-outline-width) solid var(--comp-switch-selected-track-color);
+    border-radius: var(--comp-switch-track-shape);
+    background-color: var(--comp-switch-selected-track-color);
+    align-items: center;
+}
+
+.comp-switch .handle {
+    position: absolute;
+    right: calc(var(--comp-switch-track-width) - var(--comp-switch-selected-handle-height));
+    height: var(--comp-switch-unselected-handle-height);
+    width: var(--comp-switch-unselected-handle-height);
+    border-radius: var(--comp-switch-handle-shape);
+    background-color: var(--comp-switch-unselected-handle-color);
+    transition: 
+        right var(--sys-motion-duration-short3),
+        width var(--sys-motion-duration-short3),
+        height var(--sys-motion-duration-short4),
+        background-color var(--sys-motion-duration-short3);
+    transition-timing-function: var(--sys-motion-easing-emphasized-accelerate);
+}
+
+.comp-switch.selected .handle {
+    position: absolute;
+    right: 5%;
+    height: var(--comp-switch-selected-handle-height);
+    width: var(--comp-switch-selected-handle-height);
+    border-radius: var(--comp-switch-handle-shape);
+    background-color: var(--comp-switch-selected-handle-color);
+}
+
+
+.comp-switch .handle::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    width: var(--comp-switch-state-layer-size);
+    height: var(--comp-switch-state-layer-size);
+    background-color: transparent;
+    border-radius: var(--comp-switch-state-layer-shape);
+    border: none;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity var(--sys-motion-duration-short2);
+    transition-timing-function: var(--sys-motion-easing-emphasized);
+}
+.comp-switch:not(:disabled):hover .handle::before {
+    background-color: var(--comp-switch-unselected-hover-state-layer-color);
+    opacity: var(--comp-switch-unselected-hover-state-layer-opacity);
+}
+.comp-switch:not(:disabled):focus .handle::before {
+    background-color: var(--comp-switch-unselected-focus-state-layer-color);
+    opacity: var(--comp-switch-unselected-focus-state-layer-opacity);
+}
+.comp-switch:not(:disabled):active .handle::before {
+    background-color: var(--comp-switch-unselected-focus-state-layer-color);
+    opacity: var(--comp-switch-unselected-focus-state-layer-opacity);
+}
+.comp-switch.selected .handle::before {
+    top: -8px;
+    left: -8px;
+}
+.comp-switch.selected:not(:disabled):focus .handle::before {
+    background-color: var(--comp-switch-selected-focus-state-layer-color);
+    opacity: var(--comp-switch-selected-focus-state-layer-opacity);
+}
+.comp-switch.selected:not(:disabled):active .handle::before {
+    background-color: var(--comp-switch-selected-focus-state-layer-color);
+    opacity: var(--comp-switch-selected-focus-state-layer-opacity);
+}
+.comp-switch.selected:not(:disabled):hover .handle::before {
+    background-color: var(--comp-switch-selected-hover-state-layer-color);
+    opacity: var(--comp-switch-selected-hover-state-layer-opacity);
+}
+
+
+.comp-switch:disabled{
+    background-color: rgba(var(--comp-switch-disabled-unselected-track-color), var(--comp-switch-disabled-track-opacity));
+    color: rgba(var(--comp-button-disabled-label-color), var(--comp-button-disabled-label-opacity));
+    border-color: rgba(var(--comp-switch-disabled-unselected-track-outline-color), var(--comp-switch-disabled-track-opacity));
+    pointer-events: none;
+}
+
+.comp-switch:disabled .handle{
+    background-color: rgba(var(--comp-switch-disabled-unselected-handle-color), var(--comp-switch-disabled-unselected-handle-opacity));
+    color: rgba(var(--comp-button-disabled-label-color), var(--comp-button-disabled-label-opacity));
+    pointer-events: none;
+}
+
+
+.comp-switch.selected:disabled{
+    background-color: rgba(var(--comp-switch-disabled-selected-track-color), var(--comp-switch-disabled-track-opacity));
+    border: none;
+    pointer-events: none;
+}
+
+.comp-switch.selected:disabled .handle{
+    background-color: rgba(var(--comp-switch-disabled-selected-handle-color), var(--comp-switch-disabled-selected-handle-opacity));
+    color: rgba(var(--comp-button-disabled-label-color), var(--comp-button-disabled-label-opacity));
+    pointer-events: none;
+}

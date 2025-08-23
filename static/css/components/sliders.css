@@ -1,0 +1,148 @@
+:root {
+    --comp-slider-stop-indicator-size: 0.25rem;
+    --comp-slider-stop-indicator-shape: var(--sys-shape-corner-full);
+    --comp-slider-stop-indicator-trailing-space: 0.25rem;
+    --comp-slider-stop-indicator-color: var(--sys-color-on-secondary-container);
+    --comp-slider-stop-indicator-color-selected: var(--sys-color-on-primary);
+    --comp-slider-active-stop-indicator-container-color: var(--sys-color-on-primary);
+    --comp-slider-active-stop-indicator-container-opacity: 1;
+    --comp-slider-inactive-stop-indicator-container-color: var(--sys-color-on-secondary-container);
+    --comp-slider-inactive-stop-indicator-container-opacity: 1;
+
+
+    --comp-slider-active-track-height: 1rem;
+    --comp-slider-inactive-track-height: 1rem;
+    --comp-slider-active-track-shape: var(--sys-shape-corner-full);
+    --comp-slider-active-track-outer-corner-size: 0.125rem 0.125rem;
+    --comp-slider-active-track-inner-corner-size: 0.125rem 0.125rem;
+    --comp-slider-inactive-track-shape: var(--sys-shape-corner-full);
+    --comp-slider-active-track-color: var(--sys-color-primary);
+    --comp-slider-inactive-track-color: var(--sys-color-secondary-container);
+
+    --comp-slider-handle-height: 2.75rem;
+    --comp-slider-handle-width: 0.25rem;
+    --comp-slider-handle-shape: var(--sys-shape-corner-full);
+    --comp-slider-handle-color: var(--sys-color-primary);
+    --comp-slider-active-handle-color: var(--sys-color-primary);
+    --comp-slider-active-handle-height: 2.75rem;
+    --comp-slider-active-handle-width: 0.25rem;
+    --comp-slider-active-handle-shape: var(--sys-shape-corner-full);
+    --comp-slider-active-handle-leading-space: 0.375rem;
+    --comp-slider-active-handle-trailing-space: 0.375rem;
+    --comp-slider-active-handle-padding: 0.375rem;
+
+    --comp-slider-disabled-active-stop-indicator-container-color: var(--sys-color-inverse-on-surface);
+    --comp-slider-disabled-inactive-stop-indicator-container-color: var(--sys-color-on-surface);
+    --comp-slider-disabled-active-track-color: var(--sys-color-on-surface);
+    --comp-slider-disabled-active-track-opacity: 0.38;
+    --comp-slider-disabled-inactive-track-color: var(--sys-color-on-surface);
+    --comp-slider-disabled-inactive-track-opacity: 0.12;
+    --comp-slider-disabled-handle-color: var(--sys-color-on-surface);
+    --comp-slider-disabled-handle-opacity: 0.38;
+    --comp-slider-disabled-handle-width: 0.25rem;
+
+    --comp-slider-hover-handle-width: 0.25rem;
+
+    --comp-slider-focus-active-track-color: var(--sys-color-primary);
+    --comp-slider-focus-inactive-track-color: var(--sys-color-secondary-container);
+    --comp-slider-focus-handle-width: 0.25rem;
+
+
+    --comp-slider-xsmall-active-track-height: 1rem;
+    --comp-slider-xsmall-active-track-leading-shape: .5rem;
+    --comp-slider-xsmall-inactive-track-height: 1rem;
+    --comp-slider-xsmall-inactive-track-leading-shape: .5rem;
+    --comp-slider-xsmall-active-handle-height: 2.75rem;
+
+
+    --comp-slider-small-active-track-height: 1.5rem;
+    --comp-slider-small-active-track-leading-shape: .5rem;
+    --comp-slider-small-inactive-track-height: 1.5rem;
+    --comp-slider-small-inactive-track-leading-shape: .5rem;
+    --comp-slider-small-active-handle-height: 2.75rem;
+
+    --comp-slider-medium-active-track-height: 2.5rem;
+    --comp-slider-medium-active-track-leading-shape: .75rem;
+    --comp-slider-medium-inactive-track-height: 2.5rem;
+    --comp-slider-medium-inactive-track-leading-shape: .75rem;
+    --comp-slider-medium-active-handle-height: 2.75rem;
+    --comp-slider-medium-icon-padding: .375rem;
+    --comp-slider-medium-icon-size: 1.5rem;
+
+    --comp-slider-large-active-track-height: 3.5rem;
+    --comp-slider-large-active-track-leading-shape: 1rem;
+    --comp-slider-large-inactive-track-height: 3.5rem;
+    --comp-slider-large-inactive-track-leading-shape: 1rem;
+    --comp-slider-large-active-handle-height: 4.25rem;
+    --comp-slider-large-icon-padding: .375rem;
+    --comp-slider-large-icon-size: 1.5rem;
+
+
+    --comp-slider-xlarge-active-track-height: 6rem;
+    --comp-slider-xlarge-active-track-leading-shape: 1.75rem;
+    --comp-slider-xlarge-inactive-track-height: 6rem;
+    --comp-slider-xlarge-inactive-track-leading-shape: 1.75rem;
+    --comp-slider-xlarge-active-handle-height: 6.75rem;
+    --comp-slider-xlarge-icon-padding: 1rem;
+    --comp-slider-xlarge-icon-size: 2rem;
+
+
+    --comp-slider-progress-val: 50%;
+    --comp-slider-notch-width: 4px;
+    --comp-slider-progress-end: calc(var(--comp-slider-progress-val) - var(--comp-slider-notch-width));
+    
+    --comp-slider-inactive-start: calc(var(--comp-slider-progress-val) + var(--comp-slider-notch-width));
+
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    background: transparent;
+}
+
+/* Estilo del track */
+input[type="range"]::-webkit-slider-runnable-track {
+    height: var(--comp-slider-active-track-height);
+    cursor: pointer;
+    background: linear-gradient(to right,
+            var(--comp-slider-active-track-color) 0%,
+            var(--comp-slider-active-track-color) var(--comp-slider-progress-end),
+            transparent var(--comp-slider-progress-end),
+            transparent var(--comp-slider-inactive-start),
+            var(--comp-slider-inactive-track-color) var(--comp-slider-inactive-start),
+            var(--comp-slider-inactive-track-color) 100%);
+    border-radius: var(--comp-slider-active-track-shape);
+}
+
+input[type="range"]::-moz-range-track {
+    height: var(--comp-slider-active-track-height);
+    cursor: pointer;
+
+    background: linear-gradient(to right,
+            var(--comp-slider-active-track-color) 0%,
+            var(--comp-slider-active-track-color) var(--comp-slider-progress-end),
+            transparent var(--comp-slider-progress-end),
+            transparent var(--comp-slider-inactive-start),
+            var(--comp-slider-inactive-track-color) var(--comp-slider-inactive-start),
+            var(--comp-slider-inactive-track-color) 100%);
+    border-radius: var(--comp-slider-active-track-shape);
+}
+
+/* Estilo del pulgar */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: var(--comp-slider-handle-height);
+    width: var(--comp-slider-handle-width);
+    background: var(--comp-slider-handle-color);
+    border-radius: var(--comp-slider-handle-shape);
+    cursor: pointer;
+    margin-top: calc((var(--comp-slider-handle-height) / 2) * -1 + (var(--comp-slider-active-track-height) / 2));
+}
+
+input[type="range"]::-moz-range-thumb {
+    height: var(--comp-slider-handle-height);
+    width: var(--comp-slider-handle-width);
+    background: var(--comp-slider-handle-color);
+    border-radius: var(--comp-slider-handle-shape);
+}

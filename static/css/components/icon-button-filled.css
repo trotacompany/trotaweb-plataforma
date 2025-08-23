@@ -1,0 +1,37 @@
+:root {
+    --comp-icon-button-filled-container-color: var(--sys-color-primary);
+    --comp-icon-button-filled-container-color-toggle-unselected: var(--sys-color-surface-container);
+    --comp-icon-button-filled-container-color-toggle-selected: var(--sys-color-primary);
+    --comp-icon-button-filled-icon-color: var(--sys-color-on-primary);
+    --comp-icon-button-filled-icon-color-toggle-unselected: var(--sys-color-on-surface-variant);
+    --comp-icon-button-filled-icon-color-toggle-selected: var(--sys-color-on-primary);
+
+    --comp-icon-button-filled-disabled-container-color: var(--sys-color-on-surface);
+    --comp-icon-button-filled-disabled-container-opacity: 0.1;
+    --comp-icon-button-filled-disabled-icon-color: var(--sys-color-on-surface);
+    --comp-icon-button-filled-disabled-icon-opacity: 0.38;
+
+    --comp-icon-button-filled-hovered-state-layer-color: var(--sys-color-on-primary);
+    --comp-icon-button-filled-hovered-state-layer-color-toggle-unselected: var(--sys-color-on-surface-variant);
+    --comp-icon-button-filled-hovered-state-layer-color-toggle-selected: var(--sys-color-on-primary);
+    --comp-icon-button-filled-hovered-state-layer-opacity: 0.08;
+    --comp-icon-button-filled-hovered-icon-color: var(--sys-color-on-primary);
+    --comp-icon-button-filled-hovered-icon-color-toggle-unselected: var(--sys-color-on-surface-variant);
+    --comp-icon-button-filled-hovered-icon-color-toggle-selected: var(--sys-color-on-primary);
+
+    --comp-icon-button-filled-focused-state-layer-color: var(--sys-color-on-primary);
+    --comp-icon-button-filled-focused-state-layer-color-toggle-unselected: var(--sys-color-on-surface-variant);
+    --comp-icon-button-filled-focused-state-layer-color-toggle-selected: var(--sys-color-on-primary);
+    --comp-icon-button-filled-focused-state-layer-opacity: 0.1;
+    --comp-icon-button-filled-focused-icon-color: var(--sys-color-on-primary);
+    --comp-icon-button-filled-focused-icon-color-toggle-unselected: var(--sys-color-on-surface-variant);
+    --comp-icon-button-filled-focused-icon-color-toggle-selected: var(--sys-color-on-primary);
+
+    --comp-icon-button-filled-pressed-state-layer-color: var(--sys-color-on-primary);
+    --comp-icon-button-filled-pressed-state-layer-color-toggle-unselected: var(--sys-color-on-surface-variant);
+    --comp-icon-button-filled-pressed-state-layer-color-toggle-selected: var(--sys-color-on-primary);
+    --comp-icon-button-filled-pressed-state-layer-opacity: 0.1;
+    --comp-icon-button-filled-pressed-icon-color: var(--sys-color-on-primary);
+    --comp-icon-button-filled-pressed-icon-color-toggle-unselected: var(--sys-color-on-surface-variant);
+    --comp-icon-button-filled-pressed-icon-color-toggle-selected: var(--sys-color-on-primary);
+}

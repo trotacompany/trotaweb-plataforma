@@ -1,0 +1,89 @@
+:root {
+    --comp-button-text-label-color: var(--sys-color-primary);
+    --comp-button-text-icon-color: var(--sys-color-primary);
+
+    --comp-button-text-disabled-container-color: var(--sys-color-on-surface-rgb);
+    --comp-button-text-disabled-container-opacity: 0.1;
+    --comp-button-text-disabled-label-color: var(--sys-color-on-surface-rgb);
+    --comp-button-text-disabled-label-opacity: 0.38;
+    --comp-button-text-disabled-icon-color: var(--sys-color-on-surface-rgb);
+    --comp-button-text-disabled-icon-opacity: 0.38;
+
+    --comp-button-text-hovered-state-layer-color: var(--sys-color-primary);
+    --comp-button-text-hovered-state-layer-opacity: 0.08;
+    --comp-button-text-hovered-label-color: var(--sys-color-primary);
+    --comp-button-text-hovered-icon-color: var(--sys-color-primary);
+
+    --comp-button-text-focused-state-layer-color: var(--sys-color-primary);
+    --comp-button-text-focused-state-layer-opacity: 0.1;
+    --comp-button-text-focused-label-color: var(--sys-color-primary);
+    --comp-button-text-focused-icon-color: var(--sys-color-primary);
+
+    --comp-button-text-pressed-state-layer-color: var(--sys-color-primary);
+    --comp-button-text-pressed-state-layer-opacity: 0.1;
+    --comp-button-text-pressed-label-color: var(--sys-color-primary);
+    --comp-button-text-pressed-icon-color: var(--sys-color-primary);
+}
+
+.btn.text {
+    --comp-button-container-color: transparent;
+    --comp-button-container-color-toggle-unselected: transparent;
+    --comp-button-container-color-toggle-selected: transparent;
+    --comp-button-elevation: var(--sys-elevation-level0);
+    --comp-button-label-color: var(--comp-button-text-label-color);
+    --comp-button-label-color-toggle-unselected: var(--comp-button-text-label-color);
+    --comp-button-label-color-toggle-selected: var(--comp-button-text-label-color);
+    --comp-button-icon-color: var(--comp-button-text-icon-color);
+    --comp-button-icon-color-toggle-unselected: var(--comp-button-text-icon-color);
+    --comp-button-icon-color-toggle-selected: var(--comp-button-text-icon-color);
+
+
+    /* Estados: Disabled */    
+    --comp-button-disabled-container-color: var(--comp-button-text-disabled-container-color);
+    --comp-button-disabled-container-opacity: var(--comp-button-text-disabled-container-opacity);
+    --comp-button-disabled-container-elevation: var(--sys-elevation-level0);
+    --comp-button-disabled-label-color: var(--comp-button-text-disabled-label-color);
+    --comp-button-disabled-label-opacity: var(--comp-button-text-disabled-label-opacity);
+    --comp-button-disabled-icon-color: var(--comp-button-text-disabled-icon-color);
+    --comp-button-disabled-icon-opacity: var(--comp-button-text-disabled-icon-opacity);
+
+    /* Estados: Hover */
+    --comp-button-hovered-container-layer-state-color: var(--comp-button-text-hovered-state-layer-color);
+    --comp-button-hovered-container-layer-state-color-toggle-unselected: var(--comp-button-text-hovered-state-layer-color);
+    --comp-button-hovered-container-layer-state-color-toggle-selected: var(--comp-button-text-hovered-state-layer-color);
+    --comp-button-hovered-container-layer-state-opacity: var(--comp-button-text-hovered-state-layer-opacity);
+    --comp-button-hovered-container-layer-state-elevation: var(--sys-elevation-level0);
+    --comp-button-hovered-label-color: var(--comp-button-text-hovered-label-color);
+    --comp-button-hovered-label-color-toggle-unselected: var(--comp-button-text-hovered-label-color);
+    --comp-button-hovered-label-color-toggle-selected: var(--comp-button-text-hovered-label-color);
+    --comp-button-hovered-icon-color: var(--comp-button-text-hovered-icon-color);
+    --comp-button-hovered-icon-color-toggle-unselected: var(--comp-button-text-hovered-icon-color);
+    --comp-button-hovered-icon-color-toggle-selected: var(--comp-button-text-hovered-icon-color);
+
+    
+    /* Estados: Focus */
+    --comp-button-focused-container-layer-state-color: var(--comp-button-text-focused-state-layer-color);
+    --comp-button-focused-container-layer-state-color-toggle-unselected: var(--comp-button-text-focused-state-layer-color);
+    --comp-button-focused-container-layer-state-color-toggle-selected: var(--comp-button-text-focused-state-layer-color);
+    --comp-button-focused-container-layer-state-opacity: var(--comp-button-text-focused-state-layer-opacity);
+    --comp-button-focused-container-layer-state-elevation: var(--sys-elevation-level0);
+    --comp-button-focused-label-color: var(--comp-button-text-focused-label-color);
+    --comp-button-focused-label-color-toggle-unselected: var(--comp-button-text-focused-label-color);
+    --comp-button-focused-label-color-toggle-selected: var(--comp-button-text-focused-label-color);
+    --comp-button-focused-icon-color: var(--comp-button-text-focused-icon-color);
+    --comp-button-focused-icon-color-toggle-unselected: var(--comp-button-text-focused-icon-color);
+    --comp-button-focused-icon-color-toggle-selected: var(--comp-button-text-focused-icon-color);
+
+    /* Estados: Pressed */
+    --comp-button-pressed-container-layer-state-color: var(--comp-button-text-pressed-state-layer-color);
+    --comp-button-pressed-container-layer-state-color-toggle-unselected: var(--comp-button-text-pressed-state-layer-color);
+    --comp-button-pressed-container-layer-state-color-toggle-selected: var(--comp-button-text-pressed-state-layer-color);
+    --comp-button-pressed-container-layer-state-opacity: var(--comp-button-text-pressed-state-layer-opacity);
+    --comp-button-pressed-container-layer-state-elevation: var(--sys-elevation-level0);
+    --comp-button-pressed-label-color: var(--comp-button-text-pressed-label-color);
+    --comp-button-pressed-label-color-toggle-unselected: var(--comp-button-text-pressed-label-color);
+    --comp-button-pressed-label-color-toggle-selected: var(--comp-button-text-pressed-label-color);
+    --comp-button-pressed-icon-color: var(--comp-button-text-pressed-icon-color);
+    --comp-button-pressed-icon-color-toggle-unselected: var(--comp-button-text-pressed-icon-color);
+    --comp-button-pressed-icon-color-toggle-selected: var(--comp-button-text-pressed-icon-color);
+}

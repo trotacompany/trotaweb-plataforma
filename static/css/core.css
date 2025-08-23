@@ -1,0 +1,142 @@
+@import url('./tokens/colors.css');
+@import url('./tokens/corner-radius.css');
+@import url('./tokens/elevation.css');
+@import url('./tokens/motion.css');
+@import url('./tokens/typography.css');
+@import url('./utils/colors.css');
+@import url('./utils/flex-utilities.css');
+@import url('./utils/spacing-utilities.css');
+@import url('./utils/typography-utilities.css');
+@import url('./components/buttons.css');
+@import url('./components/lists.css');
+@import url('./components/textfield-outlined.css');
+@import url('./components/icon-buttons.css');
+@import url('./components/navigation-rail.css');
+@import url('./components/dialogs.css');
+@import url('./components/appbar.css');
+@import url('./components/carousel.css');
+@import url('./components/switch.css');
+@import url('./layout-login.css');
+
+:root{
+    --sys-state-focus-indicator-thickness : 0.188rem;
+    --sys-state-focus-indicator-outer-offset : 0.125rem;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100dvh;
+    overflow: hidden;
+    background-color: var(--sys-color-background);
+    color: var(--sys-color-on-background);
+
+    font-family: var(--sys-typescale-body-medium-font);
+    font-weight: var(--sys-typescale-body-medium-weight);
+    font-size: var(--sys-typescale-body-medium-size);
+    line-height: var(--sys-typescale-body-medium-line-height);
+}
+
+.main-layout{
+    display: flex;
+    flex-direction: row;
+    gap : 1rem;
+    height: inherit;
+}
+
+.page-content{
+    width:100%;
+    flex: 1 1;
+    padding: .5rem;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+}
+
+.material-icons{
+    background-color: transparent;
+    overflow: hidden;
+    vertical-align: bottom;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+}
+.material-icons.vertical{
+    transform: rotate(90deg);
+}
+.material-icons.fill{
+    background-color: transparent;
+    overflow: hidden;
+    vertical-align: bottom;
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+}
+a {
+    width: fit-content;
+    user-select: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    background: rgba(107, 107, 107, 0.25);
+    border-radius: var(--am-ref-radius-lg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: var(--am-ref-radius-lg);
+}
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px var(--sys-color-background) inset !important;
+    -webkit-text-fill-color: var(--sys-color-on-background) !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+
+
+/* Para cambiar el color del texto autocompletado */
+input:-webkit-autofill {
+    -webkit-text-fill-color: #333 !important;
+}
+
+/* Para navegadores que no usan WebKit (como Firefox) */
+input:-moz-autofill,
+input:-moz-autofill:hover,
+input:-moz-autofill:focus {
+    background-color: var(--sys-color-background) !important;
+    color: var(--sys-color-on-background) !important;
+}
+
+.rounded-small {
+    border-radius: var(--sys-shape-corner-small);
+}
+.rounded-medium {
+    border-radius: var(--sys-shape-corner-medium);
+}
+.rounded-large {
+    border-radius: var(--sys-shape-corner-large);
+}
