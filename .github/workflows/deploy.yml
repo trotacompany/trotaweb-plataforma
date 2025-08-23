@@ -28,7 +28,7 @@ jobs:
           elif [ "${{ github.ref_name }}" == "qa" ]; then
             echo "DEPLOY_FOLDER=qa-trotaweb-plataforma" >> $GITHUB_ENV
             echo "DEPLOY_ZIP=qa-trotaweb-plataforma.zip" >> $GITHUB_ENV
-            echo "DEPLOY_SCRIPT=/var/www/qa_deploy_trotaweb_plataformap.sh" >> $GITHUB_ENV
+            echo "DEPLOY_SCRIPT=/var/www/qa_deploy_trotaweb_plataforma.sh" >> $GITHUB_ENV
           fi
 
       # 3. Comprimir el archivo .zip
