@@ -29,6 +29,7 @@ import * as $auth_FormularioLogin from "./islands/auth/FormularioLogin.tsx";
 import * as $auth_FormularioRegistro from "./islands/auth/FormularioRegistro.tsx";
 import * as $cuenta_informacionUsuario from "./islands/cuenta/informacionUsuario.tsx";
 import * as $paquetes_ListadoPaquetes from "./islands/paquetes/ListadoPaquetes.tsx";
+import * as $paquetes_PanelPaquete from "./islands/paquetes/PanelPaquete.tsx";
 import * as $recursos_ListadoRecursos from "./islands/recursos/ListadoRecursos.tsx";
 import * as $recursos_menuDespliegueTemporal from "./islands/recursos/menuDespliegueTemporal.tsx";
 import type { Manifest } from "$fresh/server.ts";
@@ -71,6 +72,7 @@ const manifest = {
     "./islands/auth/FormularioRegistro.tsx": $auth_FormularioRegistro,
     "./islands/cuenta/informacionUsuario.tsx": $cuenta_informacionUsuario,
     "./islands/paquetes/ListadoPaquetes.tsx": $paquetes_ListadoPaquetes,
+    "./islands/paquetes/PanelPaquete.tsx": $paquetes_PanelPaquete,
     "./islands/recursos/ListadoRecursos.tsx": $recursos_ListadoRecursos,
     "./islands/recursos/menuDespliegueTemporal.tsx":
       $recursos_menuDespliegueTemporal,

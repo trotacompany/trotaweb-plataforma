@@ -70,7 +70,7 @@ export async function handler(
       url_foto_perfil: payload.url_foto_perfil as string,
       licencia: "",
       licencia_version: "",
-      fecha_creacion: "",
+      fecha_creacion: payload.fecha_creacion as string,
       estatus: payload.status as string,
       creditos: "0",
     };

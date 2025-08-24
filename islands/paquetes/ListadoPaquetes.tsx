@@ -3,6 +3,7 @@ import MaterialIcon from "../MaterialIcon.tsx";
 import { GRAPHQL_RESPONSE, safeFetch } from "../../lib/api.ts";
 import { ButtonFilled } from "../../components/ButtonFilled.tsx";
 import { ButtonText } from "../../components/ButtonText.tsx";
+import PanelPaquete from "./PanelPaquete.tsx";
 interface ListadoPaquetesProps {
   id_usuario: string;
 }
@@ -140,6 +141,9 @@ export default function ListadoPaquetes(
                 />
                 <label>Nombre del paquete</label>
               </div>
+              <div class="supporting-text">
+                Puedes usar el formato de nombre que quieras.
+              </div>
             </div>
             <div class="actions">
               <ButtonText
@@ -220,31 +224,11 @@ export default function ListadoPaquetes(
         
         {/* Panel derecho - Detalles del paquete */}
         <div class="panel flex-1">
-          <div>
+          <div class="p-2">
           {paqueteSeleccionado ? (
               <>
-                <h2 class="headline-large">
-                  {paqueteSeleccionado.nombre}
-                </h2>
-
-                {/*<section class="mt-4">
-                  <h3 class="title-medium mb-3">Recursos</h3>
-                  <ButtonFilled disabled icon="add">
-                    Añadir recurso
-                  </ButtonFilled>
-                  <p class="body-small mt-2">
-                    Funcionalidad en desarrollo
-                  </p>
-                </section>*/}
-
-                <section class="mt-4">
-                  <h3 class="title-medium mb-3">Despliegue - Funcionalidad temporal</h3>
-                  <div>
-                    <a tabIndex={-1} href={`/paquete/${paqueteSeleccionado.id}/despliegue`}>
-                      <ButtonFilled>Desplegar app</ButtonFilled>
-                    </a>
-                  </div>
-                </section>
+                {/**/}
+                <PanelPaquete paquete = {paqueteSeleccionado}/>
               </>
             ) : (
             <div class="text-center p-8">

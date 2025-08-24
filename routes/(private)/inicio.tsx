@@ -50,13 +50,13 @@ export default function Inicio(props: PageProps<AppProps>) {
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {/* Tarjetas de información segura */}
               <div class="panel p-4">
-                <h3 class="title-small mb-2">Miembro desde</h3>
-                <p class="body-medium">
+                <span class="title-small mb-2">Miembro desde : </span>
+                <span class="body-medium">
                   {datosPerfil.fecha_creacion 
                     ? new Date(datosPerfil.fecha_creacion).toLocaleDateString('es-ES')
                     : "Fecha no disponible"
                   }
-                </p>
+                </span>
               </div>
             </div>
           </section>
