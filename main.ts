@@ -10,4 +10,10 @@ import { start } from "$fresh/server.ts";
 import manifest from "./fresh.gen.ts";
 import config from "./fresh.config.ts";
 
-await start(manifest, config);
+await start(manifest, {
+  ...config,
+  server: {
+    ...config.server,
+    bodySizeLimit: 2 * 1024 * 1024 * 1024,
+  },
+});
