@@ -15,7 +15,7 @@ export function ButtonText({
   return (
     <button
       {...props}
-      class={`btn text ${className ?? ""}`.trim()}  // Manejo más seguro de clases
+      className={`btn text ${className ?? ""}`.trim()}  // Manejo más seguro de clases
       disabled={props.disabled}
       type={props.type ?? "button"}
     >

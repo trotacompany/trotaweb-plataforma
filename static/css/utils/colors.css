@@ -3,3 +3,9 @@
     padding: .5rem;
     border-radius: var(--sys-shape-corner-large);
 }
+
+.panel-high {
+    background-color: var(--sys-color-surface-container-high);
+    padding: .5rem;
+    border-radius: var(--sys-shape-corner-large);
+}

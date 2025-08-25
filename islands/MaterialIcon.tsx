@@ -6,7 +6,7 @@ interface MaterialIconProps {
 export default function MaterialIcon({ name,className, size = 24 }: MaterialIconProps) {
   return (
     
-    <span class={`material-icons material-symbols-rounded ${className || ''}`}
+    <span className={`material-icons material-symbols-rounded ${className || ''}`}
       style={{
         fontSize: `${size}px`,
         width: `${size}px`,
