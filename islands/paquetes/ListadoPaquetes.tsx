@@ -106,13 +106,6 @@ export default function ListadoPaquetes(
       cargarPaquetes();
     }
   };
-  if (loading) {
-    return (
-      <div class="flex justify-center items-center p-8">
-        <div class="body-large">Cargando paquetes...</div>
-      </div>
-    );
-  }
   return (
     <>
       {/* Dialog crear paquete */}
@@ -163,82 +156,106 @@ export default function ListadoPaquetes(
       <main class="flex flex-row gap-2">
         {/* Panel izquierdo */}
         <div class="panel flex-1" style="max-width:356px;">
-          {paquetes.length === 0
+          {!loading
             ? (
-              <div class="text-center p-8">
-                <MaterialIcon
-                  name="package_2"
-                  size={48}
-                />
-                <p class="body-medium">No tienes paquetes aún</p>
-                <br />
-                <ButtonFilled onClick={abrirDialogNuevoPaquete} icon="add">
-                  Crear paquete
-                </ButtonFilled>
-              </div>
+              <>
+                {paquetes.length === 0
+                  ? (
+                    <div class="text-center p-8">
+                      <MaterialIcon
+                        name="package_2"
+                        size={48}
+                      />
+                      <p class="body-medium">No tienes paquetes aún</p>
+                      <br />
+                      <ButtonFilled
+                        onClick={abrirDialogNuevoPaquete}
+                        icon="add"
+                      >
+                        Crear paquete
+                      </ButtonFilled>
+                    </div>
+                  )
+                  : (
+                    <>
+                      <div class="text-center mb-4 mt-4">
+                        <ButtonFilled
+                          onClick={abrirDialogNuevoPaquete}
+                          icon="add"
+                        >
+                          Nuevo paquete
+                        </ButtonFilled>
+                      </div>
+                      <div class="comp-list">
+                        {paquetes.map((paquete) => (
+                          <div
+                            class={`item ${
+                              paqueteSeleccionado?.id == paquete.id
+                                ? "selected"
+                                : ""
+                            }`}
+                          >
+                            <button
+                              onClick={() => {
+                                setPaqueteSeleccionado(paquete);
+                              }}
+                              type="button"
+                            >
+                              <div class="leading">
+                                <div
+                                  class="avatar"
+                                  style={`background-image: url('${
+                                    paquete.urlLogo ?? "/logo.png"
+                                  }');`}
+                                >
+                                </div>
+                              </div>
+                              <div>
+                                {paquete.nombre}
+                                <div class="supporting-text"></div>
+                              </div>
+                              <div class="trailing">
+                                <MaterialIcon name={getEstatusPaquete(paquete)}>
+                                </MaterialIcon>
+                              </div>
+                            </button>
+                          </div>
+                        ))}
+                      </div>
+                    </>
+                  )}
+              </>
             )
             : (
               <>
-                <div class="text-center mb-4 mt-4">
-                  <ButtonFilled onClick={abrirDialogNuevoPaquete} icon="add">
-                    Nuevo paquete
-                  </ButtonFilled>
-                </div>
-                <div class="comp-list">
-                  {paquetes.map((paquete) => (
-                    <div
-                      class={`item ${
-                        paqueteSeleccionado?.id == paquete.id ? "selected" : ""
-                      }`}
-                    >
-                      <button
-                        onClick={() => {
-                          setPaqueteSeleccionado(paquete);
-                        }}
-                        type="button"
-                      >
-                        <div class="leading">
-                          <div
-                            class="avatar"
-                            style={`background-image: url('${
-                              paquete.urlLogo ?? "/logo.png"
-                            }');`}
-                          >
-                          </div>
-                        </div>
-                        <div>
-                          {paquete.nombre}
-                          <div class="supporting-text"></div>
-                        </div>
-                        <div class="trailing">
-                          <MaterialIcon name={getEstatusPaquete(paquete)}>
-                          </MaterialIcon>
-                        </div>
-                      </button>
-                    </div>
-                  ))}
+                <div class="text-center content-center p-8 h-100 content-center">
+                  <MaterialIcon
+                    name="conveyor_belt"
+                    size={48}
+                  />
+                  <p class="body-medium">Cargando paquetes...</p>
                 </div>
               </>
             )}
         </div>
-        
+
         {/* Panel derecho - Detalles del paquete */}
         <div class="panel flex-1">
-          <div class="p-2">
-          {paqueteSeleccionado ? (
+          {paqueteSeleccionado
+            ? (
               <>
                 {/**/}
-                <PanelPaquete paquete = {paqueteSeleccionado}/>
+                <PanelPaquete paquete={paqueteSeleccionado} />
               </>
-            ) : (
-            <div class="text-center p-8">
-              <MaterialIcon name="info" size={48}  />
-              <p class="body-large">
-                Selecciona un paquete para ver los detalles
-              </p>
-            </div>
-          )}
-          </div>
+            )
+            : (
+              <div class="text-center p-8 h-100 content-center">
+                <MaterialIcon name="info" size={48} />
+                <p class="body-large">
+                  Selecciona un paquete para ver los detalles
+                </p>
+              </div>
+            )}
         </div>
       </main>
     </>

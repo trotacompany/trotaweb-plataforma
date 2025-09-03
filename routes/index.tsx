@@ -53,6 +53,26 @@ export default function Home() {
           </section>
 
           <section class="mt-8">
+            <h4 class="title-medium">Seguro por defecto</h4>
+            <p>
+              Todos nuestros paquetes funcionan bajo la seguridad de Chainguard con Wolfie
+            </p>
+            <ul class="mt-2">
+              <li>
+                - Parches de seguridad en horas (no días)
+              </li>
+              <li>
+                - SBOM automático sin costo extra
+              </li>
+              <li>
+                - Supply chain security
+              </li>
+              <li>
+                - PROXIMAMENTE: Monitoreo de vulnerabilidades
+              </li>
+            </ul>
+          </section>
+          <section class="mt-8">
             <h4 class="title-medium">Precios</h4>
             <p>
               No usamos suscripciones, puedes recargar créditos cuando quieras y

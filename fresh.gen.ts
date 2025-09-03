@@ -18,6 +18,7 @@ import * as $api_private_cuenta_subirFotoPerfil from "./routes/api/private/cuent
 import * as $api_private_paquete_ingresarPaquete from "./routes/api/private/paquete/ingresarPaquete.ts";
 import * as $api_private_paquete_listadoRecursos from "./routes/api/private/paquete/listadoRecursos.ts";
 import * as $api_private_paquete_servicioDespliegueSubir from "./routes/api/private/paquete/servicioDespliegueSubir.ts";
+import * as $api_recursos_despliegue_action from "./routes/api/recursos/despliegue/action.ts";
 import * as $auth_login from "./routes/auth/login.tsx";
 import * as $auth_registrarse from "./routes/auth/registrarse.tsx";
 import * as $index from "./routes/index.tsx";
@@ -59,6 +60,8 @@ const manifest = {
       $api_private_paquete_listadoRecursos,
     "./routes/api/private/paquete/servicioDespliegueSubir.ts":
       $api_private_paquete_servicioDespliegueSubir,
+    "./routes/api/recursos/despliegue/action.ts":
+      $api_recursos_despliegue_action,
     "./routes/auth/login.tsx": $auth_login,
     "./routes/auth/registrarse.tsx": $auth_registrarse,
     "./routes/index.tsx": $index,
