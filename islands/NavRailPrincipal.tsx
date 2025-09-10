@@ -1,10 +1,10 @@
 import NavRail from "../components/NavRail.tsx";
 import NavRailItem from "../components/NavRailItem.tsx";
-interface NavRailPrincipalProps {
+interface Props {
   url: string;
 }
 export default function NavRailPrincipal(
-  { url }: NavRailPrincipalProps,
+  { url }: Props,
 ) {
   const menuItems = [
     { href: "/inicio", icon: "home", label: "Inicio" },

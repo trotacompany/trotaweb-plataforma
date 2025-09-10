@@ -23,7 +23,7 @@ interface Usuario {
   creado_por: string | null;
   modificado_por: string | null;
 }
-interface LoginResponse {
+type LoginResponse = {
   usuario: Usuario;
   token_publico: string;
 }
@@ -128,7 +128,7 @@ export default function FormularioLogin() {
             <div>
               <div class="textfield-outlined">
                 <div class="leading">
-                  <MaterialIcon name="email"></MaterialIcon>
+                  <MaterialIcon name="email" />
                 </div>
                 <input
                   value={formData.correo}
@@ -148,7 +148,7 @@ export default function FormularioLogin() {
             <div>
               <div class="textfield-outlined">
                 <div class="leading">
-                  <MaterialIcon name="key"></MaterialIcon>
+                  <MaterialIcon name="key"/>
                 </div>
                 <input
                   value={formData.password}

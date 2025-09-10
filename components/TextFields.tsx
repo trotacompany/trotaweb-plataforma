@@ -35,7 +35,7 @@ export function TextField({
       <div class="textfield-outlined">
         {icon && (
           <div class="leading">
-            <MaterialIcon name={icon} aria-hidden="true" />
+            <MaterialIcon name={icon} title={icon} ariaHidden />
           </div>
         )}
         <input

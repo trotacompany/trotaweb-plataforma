@@ -2,6 +2,9 @@ import { safeFetch } from "../../lib/api.ts";
 interface MenuDespliegueTemporalProps {
   id_paquete: string;
 }
+
+//TODO eliminar este servicio en cuanto este listo el recurso real
+
 export default function MenuDespliegueTemporal(
   { id_paquete }: MenuDespliegueTemporalProps,
 ) {

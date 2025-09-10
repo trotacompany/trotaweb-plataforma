@@ -3,7 +3,7 @@ import { IconButtonStandard } from "../components/IconButtonStandard.tsx";
 import MaterialIcon from "./MaterialIcon.tsx";
 import { safeFetch } from "../lib/api.ts";
 
-interface CabeceraPlataformaProps {
+interface Props {
   nombre_usuario: string;
   foto_perfil: string;
   titulo: string;
@@ -11,7 +11,7 @@ interface CabeceraPlataformaProps {
 }
 
 export default function CabeceraPlataforma(
-  { foto_perfil, titulo, subtitulo }: CabeceraPlataformaProps,
+  { foto_perfil, titulo, subtitulo }: Props,
 ) {
   async function CerrarSesion() {
     const response = await safeFetch("/api/auth/logout", {
@@ -27,7 +27,7 @@ export default function CabeceraPlataforma(
           <IconButtonStandard
             style={`background-size:cover; background-color:var(--sys-color-surface-container-high); background-position:center; background-image: url('${foto_perfil}')`}
           >
-            <MaterialIcon name="" />
+            <MaterialIcon name="" title="Foto de perfil del usuario" />
           </IconButtonStandard>
         }
         title={titulo}

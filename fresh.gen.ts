@@ -19,10 +19,12 @@ import * as $api_private_paquete_ingresarPaquete from "./routes/api/private/paqu
 import * as $api_private_paquete_listadoRecursos from "./routes/api/private/paquete/listadoRecursos.ts";
 import * as $api_private_paquete_servicioDespliegueSubir from "./routes/api/private/paquete/servicioDespliegueSubir.ts";
 import * as $api_recursos_despliegue_action from "./routes/api/recursos/despliegue/action.ts";
+import * as $api_recursos_recursosDisponibles from "./routes/api/recursos/recursosDisponibles.ts";
 import * as $auth_login from "./routes/auth/login.tsx";
 import * as $auth_registrarse from "./routes/auth/registrarse.tsx";
 import * as $index from "./routes/index.tsx";
 import * as $CabeceraPlataforma from "./islands/CabeceraPlataforma.tsx";
+import * as $ComponenteCarpetaTrota from "./islands/ComponenteCarpetaTrota.tsx";
 import * as $MaterialIcon from "./islands/MaterialIcon.tsx";
 import * as $MaterialIconFilled from "./islands/MaterialIconFilled.tsx";
 import * as $NavRailPrincipal from "./islands/NavRailPrincipal.tsx";
@@ -31,7 +33,6 @@ import * as $auth_FormularioRegistro from "./islands/auth/FormularioRegistro.tsx
 import * as $cuenta_informacionUsuario from "./islands/cuenta/informacionUsuario.tsx";
 import * as $paquetes_ListadoPaquetes from "./islands/paquetes/ListadoPaquetes.tsx";
 import * as $paquetes_PanelPaquete from "./islands/paquetes/PanelPaquete.tsx";
-import * as $recursos_ListadoRecursos from "./islands/recursos/ListadoRecursos.tsx";
 import * as $recursos_menuDespliegueTemporal from "./islands/recursos/menuDespliegueTemporal.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
@@ -62,12 +63,15 @@ const manifest = {
       $api_private_paquete_servicioDespliegueSubir,
     "./routes/api/recursos/despliegue/action.ts":
       $api_recursos_despliegue_action,
+    "./routes/api/recursos/recursosDisponibles.ts":
+      $api_recursos_recursosDisponibles,
     "./routes/auth/login.tsx": $auth_login,
     "./routes/auth/registrarse.tsx": $auth_registrarse,
     "./routes/index.tsx": $index,
   },
   islands: {
     "./islands/CabeceraPlataforma.tsx": $CabeceraPlataforma,
+    "./islands/ComponenteCarpetaTrota.tsx": $ComponenteCarpetaTrota,
     "./islands/MaterialIcon.tsx": $MaterialIcon,
     "./islands/MaterialIconFilled.tsx": $MaterialIconFilled,
     "./islands/NavRailPrincipal.tsx": $NavRailPrincipal,
@@ -76,7 +80,6 @@ const manifest = {
     "./islands/cuenta/informacionUsuario.tsx": $cuenta_informacionUsuario,
     "./islands/paquetes/ListadoPaquetes.tsx": $paquetes_ListadoPaquetes,
     "./islands/paquetes/PanelPaquete.tsx": $paquetes_PanelPaquete,
-    "./islands/recursos/ListadoRecursos.tsx": $recursos_ListadoRecursos,
     "./islands/recursos/menuDespliegueTemporal.tsx":
       $recursos_menuDespliegueTemporal,
   },

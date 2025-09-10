@@ -1,6 +1,6 @@
 // components/NavRailItem.tsx
-import MaterialIcon from "../islands/MaterialIcon.tsx";
 import { JSX } from "preact/jsx-runtime";
+import MaterialIcon from "../islands/MaterialIcon.tsx";
 
 interface NavRailItemProps extends JSX.HTMLAttributes<HTMLDivElement> {
   icon: string;
@@ -17,7 +17,7 @@ export default function NavRailItem({
       <div {...props} class={`item ${props.class}`}>
         <button type="button">
           <div class="icon">
-            <MaterialIcon name={icon}></MaterialIcon>
+            <MaterialIcon name={icon} title={text} />
           </div>{" "}
           <span class="text">{text || children}</span>
         </button>

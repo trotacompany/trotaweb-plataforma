@@ -140,3 +140,8 @@ input:-moz-autofill:focus {
 .rounded-large {
     border-radius: var(--sys-shape-corner-large);
 }
+
+.contenido-carpeta-trota {
+    border-left : 1px dotted var(--sys-color-outline);
+    padding-left : 8px;
+}

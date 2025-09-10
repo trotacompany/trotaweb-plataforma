@@ -1,11 +1,7 @@
 import { useEffect, useState } from "preact/hooks";
 import { GRAPHQL_RESPONSE, safeFetch } from "../../lib/api.ts";
 
-interface DatosActualUsuarioResponse {
-  usuario: DatosActualUsuario[];
-}
-
-interface DatosActualUsuario {
+type DatosActualUsuario = {
   nombre: string;
   telefono: string;
   urlFotoPerfil: string;
@@ -13,11 +9,11 @@ interface DatosActualUsuario {
   correo: string;
 }
 
-interface InformacionUsuarioProps {
+interface Props {
   id_usuario: string;
 }
 
-export default function InformacionUsuario({ id_usuario }: InformacionUsuarioProps) {
+export default function InformacionUsuario({ id_usuario }: Props) {
   const [loading, setLoading] = useState(true);
   const [datosUsuario, setDatosUsuario] = useState<DatosActualUsuario>();
 
@@ -83,7 +79,7 @@ export default function InformacionUsuario({ id_usuario }: InformacionUsuarioPro
   };
 
   const loadContent = async () => {
-    const response = await safeFetch<DatosActualUsuarioResponse>(
+    const response = await safeFetch<{usuario: DatosActualUsuario[]}>(
       "/api/private/cuenta/datosBasicos",
       {
         method: "POST",

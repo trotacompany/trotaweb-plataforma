@@ -28,7 +28,7 @@ export default function Home() {
                 style={`background-size:cover; background-position:center; background-image: url('/logo.png')`}
                 aria-label="Logo de TrotaWeb"
               >
-                <MaterialIcon name="" />
+                <MaterialIcon name="" ariaHidden/>
               </IconButtonStandard>
             </a>
           }
@@ -38,8 +38,7 @@ export default function Home() {
           <section class="mt-5">
             <h1 class="headline-medium">Bienvenido a Trota!</h1>
             <p>
-              Ofrecemos recursos web como hosting, almacenamiento, conjunto de
-              datos y sitios web.
+              Sube y despliega tus proyectos en linea facilmente.  
             </p>
           </section>
           <section class="mt-8">
@@ -55,17 +54,11 @@ export default function Home() {
           <section class="mt-8">
             <h4 class="title-medium">Seguro por defecto</h4>
             <p>
-              Todos nuestros paquetes funcionan bajo la seguridad de Chainguard con Wolfie
+              En TrotaWeb, todos tus proyectos funcionan bajo sistemas que son seguros y que actuan rápido contra vulnerabilidades. Sin que tengas que preocuparte por ello.
             </p>
             <ul class="mt-2">
               <li>
                 - Parches de seguridad en horas (no días)
-              </li>
-              <li>
-                - SBOM automático sin costo extra
-              </li>
-              <li>
-                - Supply chain security
               </li>
               <li>
                 - PROXIMAMENTE: Monitoreo de vulnerabilidades
